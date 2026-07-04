@@ -2,22 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- DNS prefetch for faster external requests -->
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Rakesh & Priyanka</title>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Non-blocking font load -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Nunito+Sans:wght@300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=Nunito+Sans:wght@300;400&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Nunito+Sans:wght@300;400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Nunito+Sans:wght@300;400&display=swap"></noscript>
 
 <script>
-/* ═══════════════════════════════════════════════════════
-   ✏️  ONLY EDIT THIS BLOCK
-═══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════
+   ✏️  EDIT ONLY THIS SECTION
+══════════════════════════════════════════════════════ */
 const W = {
   groom:        "Rakesh",
   bride:        "Priyanka",
@@ -28,1122 +25,877 @@ const W = {
   groomParents: "Mrs. Sunita & Mr. Ramesh Sharma",
   brideParents: "Mrs. Anita & Mr. Vikram Kapoor",
 
-  /* Your photos — put filenames in same folder as this file */
-  groomPhoto:   "Groom.jpg",
-  bridePhoto:   "Bride.jpg",
-  photos: [
-    "photo1.jpg","photo2.jpg","photo3.jpg",
-    "photo4.jpg","photo5.jpg","photo6.jpg"
-  ],
+  groomPhoto:  "Groom.jpg",
+  bridePhoto:  "Bride.jpg",
+  photos: ["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg"],
 
-  /* Bride lehenga color — the entire site bleeds this color */
-  /* Red → #8B1A2A  |  Purple → #4A1A6B  |  Green → #0F3D2A  |  Blue → #0F2A5C */
-  accentColor:  "#8B1A2A",
+  /* Accent: match bride lehenga — #9B2335 red · #5C2D82 purple · #1B5E3B green */
+  accent: "#9B2335",
 
   events:[
-    {name:"Haldi",    date:"Wednesday, July 1",  time:"10 AM Onwards", venue:"Kapoor Residence, Bangalore",map:"https://maps.google.com"},
-    {name:"Sangeet",  date:"Wednesday, July 1",  time:"6 PM Onwards",  venue:"Bangalore Patidar Samaj",   map:"https://maps.google.com"},
-    {name:"Mehendi",  date:"Thursday, July 2",   time:"2 PM Onwards",  venue:"Bangalore Patidar Samaj",   map:"https://maps.google.com"},
-    {name:"Shaadi",   date:"Friday, July 3",     time:"11 AM Onwards", venue:"Bangalore Patidar Samaj",   map:"https://maps.google.com"},
-    {name:"Reception",date:"Friday, July 3",     time:"7 PM Onwards",  venue:"Bangalore Patidar Samaj",   map:"https://maps.google.com"}
+    {name:"Haldi",     date:"Wednesday, July 1, 2026", time:"10 AM Onwards", venue:"Kapoor Residence, Bangalore",  map:"https://maps.google.com"},
+    {name:"Sangeet",   date:"Wednesday, July 1, 2026", time:"6 PM Onwards",  venue:"Bangalore Patidar Samaj",      map:"https://maps.google.com"},
+    {name:"Mehendi",   date:"Thursday, July 2, 2026",  time:"2 PM Onwards",  venue:"Bangalore Patidar Samaj",      map:"https://maps.google.com"},
+    {name:"Shaadi",    date:"Friday, July 3, 2026",    time:"11 AM Onwards", venue:"Bangalore Patidar Samaj",      map:"https://maps.google.com"},
+    {name:"Reception", date:"Friday, July 3, 2026",    time:"7 PM Onwards",  venue:"Bangalore Patidar Samaj",      map:"https://maps.google.com"}
   ],
 
   coupleNote: "We are both so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives. The affection shown to us by so many people has been incredibly moving, and has touched us both deeply. We look forward to seeing you at the wedding.",
 
   thingsToKnow:[
-    {title:"Hashtag", text:"While posting photos on social media please use the hashtag — #RakeshWedsPriyanka"},
-    {title:"Weather",  text:"It will be mostly sunny with temperature reaching up to 28°C at the venue"},
-    {title:"Parking",  text:"Valet parking for all our guests will be available at the venue"},
-    {title:"Dress",    text:"Festive Indian or semi-formal attire is warmly encouraged for all guests"}
+    {icon:"#️⃣", title:"Hashtag", text:"Tag your photos with #RakeshWedsPriyanka on social media"},
+    {icon:"🌤️", title:"Weather",  text:"Expect a sunny day, around 28°C at the venue"},
+    {icon:"🅿️", title:"Parking",  text:"Complimentary valet parking for all guests at the venue"},
+    {icon:"👗", title:"Dress",    text:"Festive Indian or semi-formal attire is warmly encouraged"}
   ],
 
   whatsapp:    "918431830982",
-  whatsappMsg: "Hi! I'd love to confirm my attendance at Rakesh & Priyanka's wedding 🎉",
-  instagram:   "https://www.instagram.com/",
-  music:       "music.mp3"
+  whatsappMsg: "Hi! Confirming my attendance at Rakesh & Priyanka's wedding 🎉",
+  instagram:   "https://www.instagram.com/"
 };
 /* 🚫 DO NOT EDIT BELOW */
 </script>
 
 <style>
+/* ── RESET ─────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
 body{
-  background:#08040A;
-  color:#fff;
+  background:#1C0F0A;
+  color:#F5ECD7;
   overflow-x:hidden;
-  font-family:'Nunito Sans',sans-serif;
+  font-family:'Nunito Sans',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
 }
 body.locked{overflow:hidden;height:100dvh;}
 img{display:block;}
 
+/* ── PALETTE ────────────────────────────────── */
 :root{
-  --acc:#8B1A2A;
-  --acc-rgb:139,26,42;
+  --acc:#9B2335;
+  --acc2:#C4503F;
   --gold:#C9963A;
   --gold2:#E8C97A;
   --gold3:#F5E4B0;
-  --ivory:#F7EDD8;
-  --dark:#08040A;
+  --ivory:#F5ECD7;
+  --ivory2:#FAF4E8;
+  --bg:#1C0F0A;
+  --bg2:#241409;
+  --bg3:#2E1A0E;
+  --card:#2A1810;
+  --cardB:#321C12;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --cinzel:'Cinzel','Palatino Linotype',serif;
+  --sans:'Nunito Sans',system-ui,sans-serif;
   --ease:cubic-bezier(.4,0,.2,1);
 }
 
-/* ═══════════════════════════════════════════
-   GRAIN OVERLAY — gives the "painted canvas"
-   texture across the entire site
-═══════════════════════════════════════════ */
-body::before{
-  content:'';
-  position:fixed;inset:0;z-index:9998;pointer-events:none;
-  opacity:.032;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='512' height='512' filter='url(%23g)'/%3E%3C/svg%3E");
-  background-repeat:repeat;
-  background-size:200px 200px;
-}
-
-/* ═══════════════════════════════════════════
-   GATE — ENTRY SCREEN
-═══════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   ENTRY GATE  — shows instantly, no delay
+══════════════════════════════════════════════ */
 #gate{
-  position:fixed;inset:0;z-index:9990;
+  position:fixed;inset:0;z-index:9000;
   display:flex;align-items:center;justify-content:center;
-  overflow:hidden;
+  background:linear-gradient(160deg,#2A1408 0%,#1C0F0A 50%,#241209 100%);
+  transition:opacity .6s ease,visibility .6s;
 }
-/* two-panel curtain split */
-.gate-left,.gate-right{
-  position:absolute;top:0;bottom:0;width:50%;
-  background:var(--dark);
-  transition:transform 0.9s cubic-bezier(.77,0,.18,1);
-  z-index:2;
-}
-.gate-left{left:0;transform-origin:left;}
-.gate-right{right:0;transform-origin:right;}
-#gate.open .gate-left{transform:translateX(-100%);}
-#gate.open .gate-right{transform:translateX(100%);}
+#gate.out{opacity:0;visibility:hidden;pointer-events:none;}
 
-/* centre panel — visible behind curtains */
-.gate-center{
-  position:relative;z-index:1;
-  text-align:center;padding:32px 28px;
-  width:100%;max-width:540px;
+/* decorative arch lines */
+.gate-arch{
+  position:absolute;inset:0;pointer-events:none;
+  display:flex;align-items:center;justify-content:center;
 }
-.gate-Om{
-  font-size:clamp(32px,7vw,52px);
-  color:var(--gold);
-  text-shadow:0 0 60px rgba(201,150,58,.6);
-  animation:glow 3s ease-in-out infinite;
-  display:block;margin-bottom:16px;
-}
-@keyframes glow{0%,100%{opacity:.75;text-shadow:0 0 30px rgba(201,150,58,.4)}50%{opacity:1;text-shadow:0 0 80px rgba(201,150,58,.8)}}
+.gate-arch svg{width:min(480px,88vw);opacity:.15;}
 
+.gate-inner{position:relative;z-index:2;text-align:center;padding:28px 24px;}
+
+.gate-om{
+  font-size:clamp(28px,6vw,42px);color:var(--gold2);
+  display:block;margin-bottom:14px;
+  text-shadow:0 0 40px rgba(201,150,58,.5);
+}
 .gate-tag{
-  font-family:'Cinzel',serif;
-  font-size:clamp(8px,1.6vw,10px);
-  letter-spacing:.55em;text-transform:uppercase;
-  color:rgba(201,150,58,.45);
-  margin-bottom:18px;display:block;
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.5em;
+  text-transform:uppercase;color:rgba(232,201,122,.5);
+  display:block;margin-bottom:14px;
 }
 .gate-groom{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(34px,9vw,72px);
-  font-weight:700;color:#fff;line-height:.9;
-  letter-spacing:.04em;
-  text-shadow:0 2px 40px rgba(var(--acc-rgb),.5);
-  animation:fadeUp .8s ease .2s both;
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(36px,10vw,80px);font-weight:700;
+  color:#fff;line-height:.88;letter-spacing:.05em;
+  animation:up .7s ease .1s both;
 }
 .gate-weds{
-  display:block;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(18px,4.5vw,38px);color:var(--gold);
-  letter-spacing:.28em;margin:8px 0;
-  animation:fadeUp .8s ease .38s both;
+  display:block;font-family:var(--serif);font-style:italic;
+  font-size:clamp(16px,4vw,34px);color:var(--gold2);
+  letter-spacing:.25em;margin:8px 0;
+  animation:up .7s ease .22s both;
 }
 .gate-bride{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(34px,9vw,72px);
-  font-weight:700;color:#fff;line-height:.9;
-  letter-spacing:.04em;
-  text-shadow:0 2px 40px rgba(var(--acc-rgb),.5);
-  animation:fadeUp .8s ease .5s both;
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(36px,10vw,80px);font-weight:700;
+  color:#fff;line-height:.88;letter-spacing:.05em;
+  animation:up .7s ease .34s both;
 }
 .gate-date{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
+  display:block;font-family:var(--serif);font-style:italic;
   font-size:clamp(13px,2.4vw,17px);
-  color:rgba(247,237,216,.4);margin-top:16px;
-  letter-spacing:.1em;display:block;
-  animation:fadeUp .8s ease .65s both;
+  color:rgba(245,236,215,.45);margin-top:14px;letter-spacing:.08em;
+  animation:up .7s ease .44s both;
 }
 .gate-btn{
-  margin-top:28px;display:inline-flex;align-items:center;gap:10px;
-  border:1px solid rgba(201,150,58,.5);background:transparent;
-  color:var(--gold2);padding:14px 36px;cursor:pointer;
-  font-family:'Cinzel',serif;font-size:10px;letter-spacing:.28em;
-  text-transform:uppercase;transition:all .4s;
-  animation:fadeUp .8s ease .8s both;
-  position:relative;overflow:hidden;
+  margin-top:26px;display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(201,150,58,.55);background:transparent;
+  color:var(--gold2);padding:13px 34px;cursor:pointer;
+  font-family:var(--cinzel);font-size:10px;letter-spacing:.28em;
+  text-transform:uppercase;transition:all .35s;
+  animation:up .7s ease .55s both;
 }
-.gate-btn::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent 0%,rgba(201,150,58,.1) 50%,transparent 100%);
-  transform:translateX(-100%);transition:transform .6s;
-}
-.gate-btn:hover{border-color:var(--gold);color:#fff;}
-.gate-btn:hover::after{transform:translateX(100%);}
-.gate-timer{
-  position:absolute;bottom:0;left:0;height:2px;
-  background:linear-gradient(to right,var(--acc),var(--gold));
-  width:0%;
-}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.gate-btn:hover{background:rgba(201,150,58,.1);border-color:var(--gold2);color:#fff;}
+.gate-btn svg{width:15px;height:15px;}
+.gate-bar{position:absolute;bottom:0;left:0;height:2px;background:linear-gradient(to right,var(--acc),var(--gold));width:0%;}
 
-/* music */
-#mBtn{
-  position:fixed;top:18px;right:18px;z-index:800;
-  width:42px;height:42px;border-radius:50%;
-  background:rgba(8,4,10,.75);backdrop-filter:blur(12px);
-  border:1px solid rgba(201,150,58,.3);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:all .3s;
-  opacity:0;pointer-events:none;
-}
-#mBtn.show{opacity:1;pointer-events:auto;}
-#mBtn:hover{border-color:var(--gold);transform:scale(1.08);}
-#mBtn svg{width:16px;height:16px;color:var(--gold);}
-#mBtn.on::after{
-  content:'';position:absolute;inset:-5px;border-radius:50%;
-  border:1px dashed rgba(201,150,58,.4);
-  animation:spin 8s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-audio{display:none;}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
-/* ═══════════════════════════════════════════
-   HERO — full canvas with scrolling photos
-   and painted color bloom
-═══════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   HERO  — warm deep background + photo columns
+══════════════════════════════════════════════ */
 #hero{
   position:relative;min-height:100dvh;
   display:flex;align-items:center;justify-content:center;
   overflow:hidden;
+  background:linear-gradient(160deg,#2A1408 0%,#1C0F0A 45%,#241209 100%);
 }
-/* deep painted background */
-.hero-canvas{
-  position:absolute;inset:0;
-  background:radial-gradient(ellipse 120% 80% at 50% 0%, rgba(var(--acc-rgb),.28) 0%,transparent 60%),
-             radial-gradient(ellipse 80% 100% at 0% 100%, rgba(201,150,58,.08) 0%,transparent 55%),
-             linear-gradient(170deg,#140610 0%,#08040A 45%,#0F0710 100%);
-}
-/* painted SVG petals behind hero — large, abstract Indian florals */
-.hero-flora{
-  position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.12;
-}
-/* portrait column grid */
-.hero-cols{
-  position:absolute;inset:0;display:flex;gap:3px;
-  /* vignette mask so text reads clearly */
-  -webkit-mask-image:radial-gradient(ellipse 75% 88% at 50% 50%,
-    transparent 25%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.7) 65%, black 80%);
-  mask-image:radial-gradient(ellipse 75% 88% at 50% 50%,
-    transparent 25%, rgba(0,0,0,.3) 48%, rgba(0,0,0,.7) 65%, black 80%);
-}
-.hc{flex:1;display:flex;flex-direction:column;gap:3px;}
-.hc-inner{display:flex;flex-direction:column;gap:3px;}
-.hc:nth-child(odd)  .hc-inner{animation:scrollUp   var(--s,22s) linear infinite;}
-.hc:nth-child(even) .hc-inner{animation:scrollDown var(--s,24s) linear infinite;}
-@keyframes scrollUp  {0%{transform:translateY(0)}    100%{transform:translateY(-50%)}}
-@keyframes scrollDown{0%{transform:translateY(-50%)} 100%{transform:translateY(0)}}
-.hc-item{
-  flex-shrink:0;width:100%;aspect-ratio:2/3;
-  overflow:hidden;background:#1A0E1A;
-  position:relative;
-}
-.hc-item img{
-  width:100%;height:100%;object-fit:cover;
-  /* painted photo treatment */
-  filter:sepia(.35) contrast(1.15) brightness(.68) saturate(1.25);
-}
-/* colour splash on each photo tile */
-.hc-item::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(var(--acc-rgb),.15) 0%,transparent 60%);
-  mix-blend-mode:screen;pointer-events:none;
-}
-
-/* hero text */
-.hero-txt{
-  position:relative;z-index:10;text-align:center;
-  padding:20px;
-  /* painted light halo */
-  filter:drop-shadow(0 0 80px rgba(var(--acc-rgb),.35));
-}
-.hero-eyebrow{
-  font-family:'Cinzel',serif;
-  font-size:clamp(8px,1.4vw,10px);
-  letter-spacing:.55em;text-transform:uppercase;
-  color:rgba(201,150,58,.5);margin-bottom:22px;display:block;
-}
-.hero-groom{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(44px,12vw,136px);
-  font-weight:700;color:#fff;
-  line-height:.84;letter-spacing:.04em;
-  text-shadow:0 4px 60px rgba(var(--acc-rgb),.55),0 0 140px rgba(var(--acc-rgb),.2);
-}
-.hero-weds{
-  display:block;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(18px,4.5vw,50px);
-  color:var(--gold);letter-spacing:.32em;margin:6px 0;
-}
-.hero-bride{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(44px,12vw,136px);
-  font-weight:700;color:#fff;
-  line-height:.84;letter-spacing:.04em;
-  text-shadow:0 4px 60px rgba(var(--acc-rgb),.55),0 0 140px rgba(var(--acc-rgb),.2);
-}
-.hero-date{
-  display:block;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(13px,2vw,18px);
-  color:rgba(247,237,216,.38);margin-top:18px;letter-spacing:.1em;
-}
-/* scroll indicator */
-.hero-scroll{
-  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
-  display:flex;flex-direction:column;align-items:center;gap:5px;
-  color:rgba(201,150,58,.35);
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.35em;text-transform:uppercase;
-  animation:bob 2.5s ease-in-out infinite;
-}
-.hero-scroll::before{
-  content:'';display:block;width:1px;height:48px;
-  background:linear-gradient(to bottom,transparent,rgba(201,150,58,.55));
-}
-@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(10px)}}
-
-/* ═══════════════════════════════════════════
-   SVG GARLAND DIVIDER
-═══════════════════════════════════════════ */
-.divider-garland{
-  position:relative;z-index:2;
-  height:70px;display:flex;align-items:center;justify-content:center;
-  background:transparent;overflow:visible;
-}
-.divider-garland svg{width:100%;max-width:1000px;overflow:visible;}
-
-/* ═══════════════════════════════════════════
-   INVITATION — painted cloth background
-   Photo of bride bleeds from hero into this
-═══════════════════════════════════════════ */
-#invite{
-  position:relative;overflow:hidden;
-  min-height:100vh;display:flex;align-items:center;justify-content:center;
-  padding:80px 24px;
-}
-/* painted cloth — the "bride dress color" wash */
-.invite-cloth{
-  position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 100% 55% at 50% -5%, #08040A 0%, transparent 55%),
-    radial-gradient(ellipse 70% 70% at 0%   80%, rgba(201,150,58,.06) 0%,transparent 60%),
-    radial-gradient(ellipse 60% 60% at 100% 20%, rgba(var(--acc-rgb),.12) 0%,transparent 60%),
-    linear-gradient(175deg, var(--acc) 0%, #2A0812 35%, #08040A 70%);
-}
-/* big mandala watermark */
-.invite-mandala{
-  position:absolute;top:50%;left:50%;
-  transform:translate(-50%,-50%);
-  pointer-events:none;z-index:0;opacity:.05;
-  animation:spin 90s linear infinite;
-}
-/* bride photo bleeds in from right — bottom half of her dress bleeds into cloth */
-.invite-bride-bleed{
-  position:absolute;right:0;top:0;bottom:0;width:clamp(160px,30vw,300px);
-  overflow:hidden;pointer-events:none;z-index:1;
-}
-.invite-bride-bleed img{
-  width:100%;height:100%;object-fit:cover;object-position:top center;
-  filter:sepia(.3) contrast(1.1) brightness(.6) saturate(1.2);
-  -webkit-mask-image:linear-gradient(to left,black 0%,rgba(0,0,0,.6) 40%,transparent 100%);
-  mask-image:linear-gradient(to left,black 0%,rgba(0,0,0,.6) 40%,transparent 100%);
-}
-/* groom bleeds from left */
-.invite-groom-bleed{
-  position:absolute;left:0;top:0;bottom:0;width:clamp(160px,30vw,300px);
-  overflow:hidden;pointer-events:none;z-index:1;
-}
-.invite-groom-bleed img{
-  width:100%;height:100%;object-fit:cover;object-position:top center;
-  filter:sepia(.3) contrast(1.1) brightness(.6) saturate(1.2);
-  -webkit-mask-image:linear-gradient(to right,black 0%,rgba(0,0,0,.6) 40%,transparent 100%);
-  mask-image:linear-gradient(to right,black 0%,rgba(0,0,0,.6) 40%,transparent 100%);
-}
-/* the actual card */
-.invite-card{
-  position:relative;z-index:5;
-  max-width:500px;width:100%;text-align:center;
-  padding:60px 44px;
-  border:1px solid rgba(247,237,216,.14);
-  background:rgba(8,4,10,.25);backdrop-filter:blur(3px);
-}
-.ic-corner{
-  position:absolute;width:26px;height:26px;
-  border-color:rgba(201,150,58,.45);border-style:solid;
-}
-.ic-corner.tl{top:12px;left:12px; border-width:1px 0 0 1px;}
-.ic-corner.tr{top:12px;right:12px;border-width:1px 1px 0 0;}
-.ic-corner.bl{bottom:12px;left:12px; border-width:0 0 1px 1px;}
-.ic-corner.br{bottom:12px;right:12px;border-width:0 1px 1px 0;}
-.ic-om{
-  font-size:clamp(24px,4vw,36px);color:var(--gold2);
-  text-shadow:0 0 40px rgba(201,150,58,.6);margin-bottom:6px;
-}
-.ic-rule{width:40px;height:1px;background:rgba(201,150,58,.3);margin:14px auto;}
-.ic-gp{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:12px;color:rgba(247,237,216,.42);line-height:1.9;margin-bottom:6px;
-}
-.ic-parents{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:12px;color:rgba(247,237,216,.42);line-height:1.9;margin-bottom:20px;
-}
-.ic-label{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.45em;
-  text-transform:uppercase;color:rgba(201,150,58,.4);margin-bottom:8px;
-}
-.ic-invite{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:14px;color:rgba(247,237,216,.45);margin-bottom:20px;line-height:1.7;
-}
-.ic-groom{
-  display:block;font-family:'Cinzel Decorative',serif;
-  font-size:clamp(28px,5.5vw,46px);font-weight:700;
-  color:#fff;line-height:1;
-  text-shadow:0 0 40px rgba(var(--acc-rgb),.5);
-}
-.ic-and{
-  display:block;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(20px,4vw,32px);color:var(--gold);
-  letter-spacing:.18em;margin:4px 0;
-}
-.ic-bride{
-  display:block;font-family:'Cinzel Decorative',serif;
-  font-size:clamp(28px,5.5vw,46px);font-weight:700;
-  color:#fff;line-height:1;
-  text-shadow:0 0 40px rgba(var(--acc-rgb),.5);
-}
-.ic-foot{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:12px;color:rgba(247,237,216,.35);margin-top:20px;line-height:1.8;
-}
-.ic-events-tag{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.3em;
-  text-transform:uppercase;color:rgba(201,150,58,.32);margin-top:22px;
-}
-.ic-person-tag{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:11px;color:rgba(247,237,216,.38);
-  letter-spacing:.06em;margin-top:6px;
-}
-.ic-person-parents{
-  font-family:'Cormorant Garamond',serif;
-  font-size:13px;color:rgba(247,237,216,.55);
-  line-height:1.6;margin-bottom:4px;
-  font-weight:400;
-}
-@media(max-width:480px){.invite-card{padding:40px 22px;}.invite-bride-bleed,.invite-groom-bleed{width:80px;}}
-
-/* ═══════════════════════════════════════════
-   EVENTS — full-bleed cinematic cards
-   Each card is a SCENE not a box
-═══════════════════════════════════════════ */
-#events{
-  background:#08040A;padding:80px 0 100px;
-  position:relative;overflow:hidden;
-}
-.ev-section-head{
-  text-align:center;padding:0 24px;margin-bottom:64px;
-  position:relative;z-index:2;
-}
-.ev-sh-tag{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.5em;
-  text-transform:uppercase;color:rgba(201,150,58,.35);margin-bottom:12px;
-}
-.ev-sh-title{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
-  font-size:clamp(36px,7vw,68px);color:var(--ivory);letter-spacing:.04em;
-}
-/* horizontal scroll */
-.ev-scroll{
-  overflow-x:auto;display:flex;gap:3px;
-  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
-  scrollbar-width:none;padding:0 clamp(20px,5vw,64px);
-  position:relative;z-index:2;
-}
-.ev-scroll::-webkit-scrollbar{display:none;}
-
-/* Each event card = a full painted scene */
-.ev-scene{
-  flex-shrink:0;
-  width:clamp(240px,58vw,290px);
-  min-height:440px;
-  scroll-snap-align:start;
-  position:relative;overflow:hidden;
-  display:flex;flex-direction:column;
-  background:#0D070F;
-  transition:transform .45s var(--ease);
-}
-.ev-scene:hover{transform:translateY(-8px);}
-/* full painted background fill per card */
-.ev-paint{
+/* warm color bloom */
+.h-bloom{
   position:absolute;inset:0;pointer-events:none;
   background:
-    radial-gradient(ellipse 100% 55% at 50% 0%, rgba(var(--acc-rgb),.22) 0%,transparent 60%),
-    radial-gradient(ellipse 80% 80% at 100% 100%, rgba(201,150,58,.08) 0%,transparent 60%);
+    radial-gradient(ellipse 110% 65% at 50% 0%,   rgba(155,35,53,.22) 0%,transparent 60%),
+    radial-gradient(ellipse 70%  80% at 0%   100%, rgba(201,150,58,.10) 0%,transparent 55%),
+    radial-gradient(ellipse 60%  60% at 100% 50%,  rgba(201,150,58,.07) 0%,transparent 55%);
 }
-/* big illustrated SVG mandala per card */
-.ev-art{
-  position:absolute;bottom:-30px;right:-30px;
-  width:180px;height:180px;opacity:.04;pointer-events:none;
+/* photo columns */
+.h-cols{
+  position:absolute;inset:0;display:flex;gap:3px;
+  -webkit-mask-image:radial-gradient(ellipse 72% 85% at 50% 50%,
+    transparent 22%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.65) 62%,black 78%);
+  mask-image:radial-gradient(ellipse 72% 85% at 50% 50%,
+    transparent 22%,rgba(0,0,0,.25) 45%,rgba(0,0,0,.65) 62%,black 78%);
 }
-/* painted strokes on left edge */
-.ev-stroke{
-  position:absolute;left:0;top:0;bottom:0;width:3px;
-  background:linear-gradient(to bottom,transparent,var(--gold),var(--acc),transparent);
-  opacity:.5;
+.hc{flex:1;display:flex;flex-direction:column;gap:3px;}
+.hc-inn{display:flex;flex-direction:column;gap:3px;will-change:transform;}
+.hc:nth-child(odd)  .hc-inn{animation:cUp   var(--s,22s) linear infinite;}
+.hc:nth-child(even) .hc-inn{animation:cDown var(--s,24s) linear infinite;}
+@keyframes cUp  {to{transform:translateY(-50%)}}
+@keyframes cDown{from{transform:translateY(-50%)}to{transform:translateY(0)}}
+.hc-ph{
+  flex-shrink:0;width:100%;aspect-ratio:2/3;
+  overflow:hidden;background:#2A1408;
 }
-/* event number as massive watermark */
-.ev-waternum{
-  position:absolute;top:-10px;right:8px;
-  font-family:'Cinzel Decorative',serif;
-  font-size:120px;font-weight:700;
-  color:rgba(255,255,255,.025);line-height:1;
-  pointer-events:none;user-select:none;letter-spacing:-.05em;
+.hc-ph img{width:100%;height:100%;object-fit:cover;filter:brightness(.65);}
+/* warm tint per photo */
+.hc-ph::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(155,35,53,.12) 0%,transparent 60%);
+  pointer-events:none;
 }
-.ev-body{
-  position:relative;z-index:5;
-  padding:32px 24px 28px;
-  display:flex;flex-direction:column;flex:1;
+
+/* hero centre text */
+.h-txt{position:relative;z-index:10;text-align:center;padding:20px;}
+.h-eye{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.5em;
+  text-transform:uppercase;color:rgba(232,201,122,.55);
+  display:block;margin-bottom:20px;
 }
-.ev-ceremony{
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(22px,4.5vw,30px);
-  font-weight:700;color:#fff;
-  line-height:1;margin-bottom:20px;letter-spacing:.02em;
+.h-groom,.h-bride{
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(48px,13vw,138px);font-weight:700;
+  color:#fff;line-height:.84;letter-spacing:.04em;
+  text-shadow:0 2px 48px rgba(155,35,53,.5);
+}
+.h-weds{
+  display:block;font-family:var(--serif);font-style:italic;
+  font-size:clamp(18px,4.5vw,50px);color:var(--gold2);
+  letter-spacing:.3em;margin:6px 0;
+}
+.h-date{
+  display:block;font-family:var(--serif);font-style:italic;
+  font-size:clamp(13px,2vw,18px);color:rgba(245,236,215,.5);
+  margin-top:16px;letter-spacing:.08em;
+}
+.h-scroll{
+  position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  color:rgba(201,150,58,.4);font-family:var(--cinzel);font-size:8px;
+  letter-spacing:.3em;text-transform:uppercase;
+  animation:bob 2.8s ease-in-out infinite;
+}
+.h-scroll::before{content:'';display:block;width:1px;height:40px;background:linear-gradient(to bottom,transparent,rgba(201,150,58,.5));}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* ══════════════════════════════════════════════
+   GARLAND DIVIDER
+══════════════════════════════════════════════ */
+.garland{height:64px;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.garland svg{width:100%;max-width:1000px;}
+
+/* ══════════════════════════════════════════════
+   INVITATION  — warm parchment tones, readable
+══════════════════════════════════════════════ */
+#invite{
+  position:relative;overflow:hidden;
+  padding:80px 24px;
+  background:linear-gradient(175deg,var(--bg) 0%,var(--acc) 38%,var(--bg3) 68%,var(--bg2) 100%);
+}
+/* subtle top/bottom fade */
+#invite::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:100px;
+  background:linear-gradient(to bottom,var(--bg),transparent);
+  pointer-events:none;z-index:1;
+}
+#invite::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:100px;
+  background:linear-gradient(to top,var(--bg2),transparent);
+  pointer-events:none;z-index:1;
+}
+/* bride/groom photo bleeds */
+.inv-gbleed,.inv-bbleed{
+  position:absolute;top:0;bottom:0;width:clamp(120px,26vw,260px);
+  overflow:hidden;pointer-events:none;z-index:2;
+}
+.inv-gbleed{left:0;}
+.inv-bbleed{right:0;}
+.inv-gbleed img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  filter:brightness(.55);
+  -webkit-mask-image:linear-gradient(to right,rgba(0,0,0,.7) 0%,transparent 100%);
+  mask-image:linear-gradient(to right,rgba(0,0,0,.7) 0%,transparent 100%);
+}
+.inv-bbleed img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  filter:brightness(.55);
+  -webkit-mask-image:linear-gradient(to left,rgba(0,0,0,.7) 0%,transparent 100%);
+  mask-image:linear-gradient(to left,rgba(0,0,0,.7) 0%,transparent 100%);
+}
+
+/* the card */
+.inv-card{
+  position:relative;z-index:5;max-width:480px;width:100%;
+  margin:0 auto;text-align:center;
+  padding:52px 40px;
+  background:rgba(28,15,10,.35);
+  border:1px solid rgba(245,228,176,.18);
+}
+.inv-c{position:absolute;width:22px;height:22px;border-color:rgba(232,201,122,.45);border-style:solid;}
+.inv-c.tl{top:10px;left:10px;border-width:1px 0 0 1px;}
+.inv-c.tr{top:10px;right:10px;border-width:1px 1px 0 0;}
+.inv-c.bl{bottom:10px;left:10px;border-width:0 0 1px 1px;}
+.inv-c.br{bottom:10px;right:10px;border-width:0 1px 1px 0;}
+
+.inv-om{
+  font-size:clamp(22px,4vw,32px);color:var(--gold2);
+  text-shadow:0 0 30px rgba(232,201,122,.4);margin-bottom:6px;
+}
+.inv-rule{width:36px;height:1px;background:rgba(232,201,122,.35);margin:14px auto;}
+/* ── TEXT — high contrast on dark bg ─── */
+.inv-gp{
+  font-family:var(--serif);font-style:italic;
+  font-size:13px;line-height:1.9;margin-bottom:6px;
+  color:rgba(245,236,215,.75);  /* brighter than before */
+}
+.inv-label{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.42em;
+  text-transform:uppercase;color:rgba(232,201,122,.6);margin-bottom:10px;
+}
+.inv-sub{
+  font-family:var(--serif);font-style:italic;
+  font-size:14px;color:rgba(245,236,215,.65);margin-bottom:20px;line-height:1.7;
+}
+.inv-name{
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(30px,6vw,50px);font-weight:700;
+  color:#fff;line-height:1.05;letter-spacing:.04em;
+}
+.inv-ptag{
+  font-family:var(--serif);font-style:italic;
+  font-size:12px;color:rgba(232,201,122,.7);  /* gold, readable */
+  margin-top:5px;
+}
+.inv-pname{
+  font-family:var(--serif);
+  font-size:14px;color:rgba(245,236,215,.8);  /* bright ivory */
+  line-height:1.6;margin-bottom:8px;
+}
+.inv-and{
+  display:block;font-family:var(--serif);font-style:italic;
+  font-size:clamp(20px,4vw,30px);color:var(--gold2);
+  letter-spacing:.18em;margin:10px 0;
+}
+.inv-tag{
+  font-family:var(--cinzel);font-size:8px;letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(232,201,122,.45);margin-top:20px;
+}
+@media(max-width:480px){
+  .inv-card{padding:36px 20px;}
+  .inv-gbleed,.inv-bbleed{width:70px;}
+}
+
+/* ══════════════════════════════════════════════
+   EVENTS  — warm card panels, readable text
+══════════════════════════════════════════════ */
+#events{
+  background:var(--bg2);padding:80px 0 90px;
+}
+.ev-head{text-align:center;padding:0 24px;margin-bottom:52px;}
+.ev-head-tag{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.45em;
+  text-transform:uppercase;color:rgba(201,150,58,.55);margin-bottom:10px;
+}
+.ev-head-title{
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(34px,6.5vw,64px);
+  color:var(--ivory);  /* warm ivory, NOT rgba with low opacity */
+  letter-spacing:.04em;
+}
+.ev-track{
+  display:flex;gap:3px;overflow-x:auto;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding:0 clamp(20px,5vw,60px);
+}
+.ev-track::-webkit-scrollbar{display:none;}
+
+.ev-card{
+  flex-shrink:0;width:clamp(230px,55vw,276px);
+  min-height:400px;scroll-snap-align:start;
+  position:relative;overflow:hidden;
+  background:var(--card);
+  border:1px solid rgba(201,150,58,.12);
+  display:flex;flex-direction:column;
+  transition:transform .35s var(--ease),border-color .35s;
+}
+.ev-card:hover{transform:translateY(-5px);border-color:rgba(201,150,58,.28);}
+/* warm top accent per card */
+.ev-card-top{
+  height:3px;
+  background:linear-gradient(to right,var(--acc),var(--gold),transparent);
+  flex-shrink:0;
+}
+/* ghost number watermark */
+.ev-ghost{
+  position:absolute;bottom:-8px;right:4px;
+  font-family:var(--cinzel);font-size:88px;font-weight:700;
+  color:rgba(201,150,58,.06);line-height:1;pointer-events:none;user-select:none;
+}
+.ev-body{position:relative;z-index:2;padding:26px 22px 24px;display:flex;flex-direction:column;flex:1;}
+.ev-icon{font-size:26px;margin-bottom:14px;display:block;}
+.ev-name{
+  font-family:var(--cinzel);
+  font-size:clamp(20px,4vw,26px);font-weight:700;
+  color:#fff;  /* pure white — maximum contrast */
+  margin-bottom:16px;line-height:1;
 }
 .ev-date{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:14px;color:var(--gold);margin-bottom:4px;
+  font-family:var(--serif);font-style:italic;
+  font-size:14px;color:var(--gold2);  /* bright gold */
+  margin-bottom:4px;
 }
 .ev-venue{
-  font-family:'Cormorant Garamond',serif;
-  font-size:13px;color:rgba(247,237,216,.38);
+  font-family:var(--serif);
+  font-size:13px;
+  color:rgba(245,236,215,.7);  /* warm ivory, readable */
   line-height:1.5;margin-bottom:4px;
 }
 .ev-time{
-  font-family:'Nunito Sans',sans-serif;
-  font-size:11px;color:rgba(247,237,216,.22);
-  letter-spacing:.08em;margin-bottom:auto;padding-bottom:24px;
+  font-family:var(--sans);font-size:11px;
+  color:rgba(245,236,215,.45);
+  letter-spacing:.06em;margin-bottom:auto;padding-bottom:20px;
 }
 .ev-route{
-  display:inline-flex;align-items:center;gap:7px;
-  font-family:'Cinzel',serif;font-size:9px;
-  letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);text-decoration:none;
-  border-bottom:1px solid rgba(201,150,58,.25);
-  padding-bottom:2px;transition:all .3s;width:fit-content;
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold2);text-decoration:none;  /* bright gold, not faded */
+  border-bottom:1px solid rgba(232,201,122,.3);padding-bottom:2px;
+  transition:all .3s;width:fit-content;
 }
-.ev-route:hover{color:#fff;border-color:rgba(255,255,255,.25);}
+.ev-route:hover{color:#fff;border-color:rgba(255,255,255,.3);}
 .ev-route svg{width:11px;height:11px;}
 
-/* ═══════════════════════════════════════════
-   MEET THE COUPLE — painted portrait layout
-   Photos rendered as oil paintings
-═══════════════════════════════════════════ */
-#couple{
-  position:relative;overflow:hidden;
-  background:#08040A;padding:0;
-}
-/* full-width painting background */
-.cp-bg{
-  position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 55% 70% at 20% 50%, rgba(var(--acc-rgb),.14) 0%,transparent 65%),
-    radial-gradient(ellipse 45% 60% at 80% 50%, rgba(201,150,58,.07) 0%,transparent 60%);
-}
-.cp-wrap{
-  position:relative;z-index:2;
+/* ══════════════════════════════════════════════
+   MEET THE COUPLE  — oil-painting portrait
+══════════════════════════════════════════════ */
+#couple{position:relative;overflow:hidden;background:var(--bg);}
+.cp-grid{
   display:grid;grid-template-columns:1fr 1fr;
-  min-height:80vh;
+  min-height:75vh;
 }
 /* photo side */
-.cp-photo-side{
+.cp-photo{
   position:relative;overflow:hidden;
-  display:flex;align-items:stretch;
+  background:var(--bg3);min-height:420px;
+  display:flex;align-items:center;justify-content:center;font-size:72px;
 }
-.cp-photo-main{
-  width:100%;height:100%;min-height:500px;
-  background:#1A0E1A;position:relative;
-  display:flex;align-items:center;justify-content:center;font-size:80px;
-  overflow:hidden;
-}
-.cp-photo-main img{
+.cp-photo img{
   width:100%;height:100%;object-fit:cover;
-  filter:sepia(.25) contrast(1.12) brightness(.75) saturate(1.2);
-  transition:transform 10s ease;
+  filter:brightness(.8) contrast(1.05);
 }
-.cp-photo-main:hover img{transform:scale(1.04);}
-/* painted edge — photo bleeds into text */
-.cp-photo-main::after{
+/* edge bleed to text */
+.cp-photo::after{
   content:'';position:absolute;inset:0;
-  background:linear-gradient(to right,transparent 55%,#08040A 98%);
+  background:linear-gradient(to right,transparent 50%,var(--bg) 100%);
   pointer-events:none;
 }
-/* painted top/bottom on photo */
-.cp-photo-main::before{
+.cp-photo::before{
   content:'';position:absolute;inset:0;z-index:1;
-  background:
-    linear-gradient(to bottom,#08040A 0%,transparent 12%,transparent 88%,#08040A 100%);
+  background:linear-gradient(to bottom,var(--bg) 0%,transparent 10%,transparent 90%,var(--bg) 100%);
   pointer-events:none;
 }
 /* text side */
-.cp-text-side{
-  padding:clamp(40px,6vw,80px) clamp(28px,5vw,64px);
+.cp-text{
+  padding:clamp(36px,5vw,72px) clamp(24px,4vw,56px);
   display:flex;flex-direction:column;justify-content:center;
-  background:linear-gradient(135deg,rgba(18,8,20,.9),#08040A);
+  background:linear-gradient(135deg,var(--bg2),var(--bg));
 }
-.cp-eyebrow{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.5em;
-  text-transform:uppercase;color:rgba(201,150,58,.38);margin-bottom:12px;
+.cp-eye{
+  font-family:var(--cinzel);font-size:8px;letter-spacing:.45em;
+  text-transform:uppercase;color:rgba(201,150,58,.55);margin-bottom:10px;
 }
-.cp-heading{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
-  font-size:clamp(36px,5.5vw,64px);color:var(--ivory);
-  line-height:1.05;margin-bottom:28px;letter-spacing:.03em;
+.cp-title{
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(30px,4.5vw,54px);
+  color:var(--ivory);  /* warm ivory, easy to read */
+  line-height:1.1;margin-bottom:20px;
 }
-.cp-heading strong{
-  font-style:italic;font-weight:600;color:var(--gold2);
-}
-.cp-rule{
-  width:48px;height:1px;
-  background:linear-gradient(to right,var(--acc),var(--gold));
-  margin-bottom:24px;
-}
+.cp-title strong{font-weight:600;color:var(--gold2);}
+.cp-rule{width:40px;height:1px;background:linear-gradient(to right,var(--acc),var(--gold));margin-bottom:20px;}
 .cp-note{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(16px,2vw,19px);
-  color:rgba(247,237,216,.48);line-height:1.9;margin-bottom:36px;
+  font-family:var(--serif);
+  font-size:clamp(15px,1.8vw,18px);
+  color:rgba(245,236,215,.72);  /* warm, readable */
+  line-height:1.85;margin-bottom:32px;
 }
-/* mini sliding gallery */
-.cp-gallery{overflow:hidden;}
-.cp-gallery-track{
-  display:flex;gap:3px;
-  transition:transform .6s var(--ease);
-}
-.cp-gslide{
+/* mini gallery */
+.cp-gal{overflow:hidden;}
+.cp-gal-track{display:flex;gap:3px;transition:transform .38s var(--ease);}
+.cp-gal-slide{
   flex-shrink:0;width:calc(33.333% - 2px);aspect-ratio:3/4;
-  overflow:hidden;background:#1A0E1A;
-  position:relative;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;font-size:28px;
+  overflow:hidden;background:var(--bg3);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;font-size:22px;
 }
-.cp-gslide img{
-  width:100%;height:100%;object-fit:cover;
-  filter:sepia(.2) contrast(1.1) brightness(.78);
-  transition:transform .5s;
-}
-.cp-gslide:hover img{transform:scale(1.06);}
-/* painted shimmer on gallery */
-.cp-gslide::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(var(--acc-rgb),.12) 0%,transparent 60%);
-  pointer-events:none;
-}
-.cp-nav{display:flex;gap:8px;margin-top:12px;}
+.cp-gal-slide img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);transition:transform .4s;}
+.cp-gal-slide:hover img{transform:scale(1.05);}
+.cp-nav{display:flex;gap:8px;margin-top:10px;}
 .cp-nav button{
-  width:34px;height:34px;border-radius:50%;
-  border:1px solid rgba(247,237,216,.1);background:transparent;
-  color:rgba(247,237,216,.45);font-size:18px;cursor:pointer;
+  width:32px;height:32px;border-radius:50%;
+  border:1px solid rgba(245,236,215,.15);background:transparent;
+  color:rgba(245,236,215,.55);font-size:17px;cursor:pointer;
   display:flex;align-items:center;justify-content:center;transition:all .3s;
 }
-.cp-nav button:hover{border-color:var(--gold);color:var(--gold);}
-@media(max-width:700px){
-  .cp-wrap{grid-template-columns:1fr;}
-  .cp-photo-main{min-height:55vw;}
-  .cp-photo-main::after{background:linear-gradient(to bottom,transparent 60%,#08040A 100%);}
-  .cp-text-side{padding:32px 22px;}
+.cp-nav button:hover{border-color:var(--gold2);color:var(--gold2);}
+@media(max-width:680px){
+  .cp-grid{grid-template-columns:1fr;}
+  .cp-photo{min-height:55vw;}
+  .cp-photo::after{background:linear-gradient(to bottom,transparent 60%,var(--bg) 100%);}
+  .cp-text{padding:28px 20px;}
 }
 
-/* ═══════════════════════════════════════════
-   RSVP — giant painted canvas
-═══════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   RSVP  — rich warm canvas
+══════════════════════════════════════════════ */
 #rsvp{
-  position:relative;overflow:hidden;
-  min-height:100vh;
+  position:relative;overflow:hidden;min-height:90vh;
   display:flex;align-items:center;justify-content:center;
   padding:80px 24px;text-align:center;
+  background:linear-gradient(160deg,var(--bg) 0%,#2E1008 50%,var(--bg2) 100%);
 }
-.rsvp-canvas{
-  position:absolute;inset:0;
-  background:
-    radial-gradient(ellipse 90% 70% at 50% 50%, rgba(var(--acc-rgb),.16) 0%,transparent 70%),
-    linear-gradient(180deg,#08040A 0%,#0F0710 50%,#08040A 100%);
+.rsvp-bloom{
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 85% 70% at 50% 50%,rgba(155,35,53,.18) 0%,transparent 70%);
 }
-/* huge calligraphy watermark */
+/* large calligraphy watermark — READABLE colour */
 .rsvp-wm{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
   pointer-events:none;z-index:0;
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(100px,22vw,220px);font-weight:300;
-  color:rgba(var(--acc-rgb),.06);
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(80px,18vw,180px);font-weight:300;
+  color:rgba(155,35,53,.08);
   white-space:nowrap;letter-spacing:-.02em;
-  animation:spin 100s linear infinite;
 }
 .rsvp-inner{position:relative;z-index:5;}
 .rsvp-please{
-  font-family:'Cinzel',serif;
-  font-size:clamp(10px,2vw,13px);
-  letter-spacing:.55em;text-transform:uppercase;
-  color:rgba(201,150,58,.35);margin-bottom:6px;
-  display:block;
+  font-family:var(--cinzel);font-size:10px;letter-spacing:.5em;
+  text-transform:uppercase;
+  color:rgba(232,201,122,.6);  /* visible gold */
+  margin-bottom:6px;display:block;
 }
 .rsvp-big{
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(70px,20vw,180px);
-  font-weight:700;color:#fff;line-height:.8;
-  text-shadow:0 0 100px rgba(var(--acc-rgb),.4);
-  margin-bottom:52px;letter-spacing:.05em;display:block;
+  font-family:var(--cinzel);
+  font-size:clamp(64px,17vw,160px);
+  font-weight:700;color:#fff;  /* pure white */
+  line-height:.8;margin-bottom:48px;letter-spacing:.06em;display:block;
+  text-shadow:0 0 80px rgba(155,35,53,.4);
 }
 .rsvp-wa{
   display:inline-flex;align-items:center;gap:16px;
-  border:1px solid rgba(255,255,255,.07);
-  padding:22px 32px;text-decoration:none;
-  transition:all .45s;max-width:380px;width:100%;
-  position:relative;overflow:hidden;
+  border:1px solid rgba(245,236,215,.12);
+  background:rgba(245,236,215,.04);
+  padding:20px 30px;text-decoration:none;
+  transition:all .4s;max-width:380px;width:100%;
 }
-.rsvp-wa::before{
-  content:'';position:absolute;inset:0;
-  background:rgba(37,211,102,.05);transform:scaleX(0);transform-origin:left;
-  transition:transform .4s var(--ease);
-}
-.rsvp-wa:hover{border-color:rgba(37,211,102,.35);}
-.rsvp-wa:hover::before{transform:scaleX(1);}
+.rsvp-wa:hover{border-color:rgba(37,211,102,.4);background:rgba(37,211,102,.06);}
 .wa-icon{
-  width:46px;height:46px;border-radius:50%;flex-shrink:0;
-  background:rgba(37,211,102,.12);
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:rgba(37,211,102,.14);
   display:flex;align-items:center;justify-content:center;
 }
 .wa-icon svg{width:22px;height:22px;color:#25d166;}
-.wa-texts{text-align:left;position:relative;}
-.wa-label{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.25em;
-  text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:4px;
+.wa-t{text-align:left;}
+.wa-lbl{
+  font-family:var(--cinzel);font-size:8px;letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(245,236,215,.5);  /* visible */
+  margin-bottom:3px;
 }
-.wa-cta{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;}
+.wa-cta{
+  font-family:var(--serif);font-size:18px;
+  color:#fff;  /* white — easy to read */
+}
 
-/* ═══════════════════════════════════════════
-   THINGS TO KNOW — painted info panels
-═══════════════════════════════════════════ */
-#things{
-  padding:80px 24px;
-  background:linear-gradient(180deg,#08040A 0%,#0A050C 100%);
-  position:relative;overflow:hidden;
-}
-/* painted texture behind section */
-#things::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 80% 60% at 50% 100%,rgba(201,150,58,.04) 0%,transparent 65%);
-}
-.th-head{max-width:600px;margin:0 auto 56px;text-align:center;position:relative;z-index:2;}
-.th-eyebrow{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.5em;
-  text-transform:uppercase;color:rgba(201,150,58,.35);margin-bottom:12px;
+/* ══════════════════════════════════════════════
+   THINGS TO KNOW  — light-ish cards
+══════════════════════════════════════════════ */
+#things{padding:80px 24px;background:var(--bg2);}
+.th-head{max-width:560px;margin:0 auto 48px;text-align:center;}
+.th-eye{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.45em;
+  text-transform:uppercase;color:rgba(201,150,58,.55);margin-bottom:10px;
 }
 .th-title{
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
-  font-size:clamp(32px,6vw,56px);color:var(--ivory);line-height:1.15;
+  font-family:var(--serif);font-style:italic;font-weight:300;
+  font-size:clamp(28px,5vw,50px);
+  color:var(--ivory);  /* warm ivory */
+  line-height:1.15;
 }
 .th-title em{font-style:italic;color:var(--gold2);font-weight:400;}
 .th-sub{
-  font-family:'Cormorant Garamond',serif;
-  font-size:15px;color:rgba(247,237,216,.3);line-height:1.8;margin-top:14px;
+  font-family:var(--serif);font-style:italic;font-size:15px;
+  color:rgba(245,236,215,.55);line-height:1.8;margin-top:12px;
 }
 .th-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
   gap:2px;max-width:900px;margin:0 auto;
-  position:relative;z-index:2;
 }
 .tk{
-  background:#0D070F;padding:32px 24px;
-  border:1px solid rgba(255,255,255,.03);
-  position:relative;overflow:hidden;
-  transition:border-color .35s,background .35s;
+  background:var(--cardB);padding:28px 22px;
+  border:1px solid rgba(201,150,58,.1);
+  transition:border-color .3s,background .3s;position:relative;overflow:hidden;
 }
 .tk::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(to right,transparent,rgba(201,150,58,.25),transparent);
-  opacity:0;transition:opacity .35s;
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(to right,var(--acc),var(--gold),transparent);
+  opacity:0;transition:opacity .3s;
 }
-.tk:hover{background:#0F0912;border-color:rgba(201,150,58,.12);}
+.tk:hover{background:#3A2216;border-color:rgba(201,150,58,.25);}
 .tk:hover::before{opacity:1;}
-/* decorative dot top-right */
-.tk::after{
-  content:'✦';position:absolute;top:12px;right:14px;
-  font-size:10px;color:rgba(201,150,58,.15);
-}
+.tk-icon{font-size:24px;margin-bottom:12px;display:block;}
 .tk-title{
-  font-family:'Cinzel',serif;font-size:15px;font-weight:600;
-  color:#fff;margin-bottom:10px;letter-spacing:.04em;
+  font-family:var(--cinzel);font-size:14px;font-weight:600;
+  color:#fff;  /* white */
+  margin-bottom:8px;
 }
 .tk-text{
-  font-family:'Cormorant Garamond',serif;
-  font-size:15px;color:rgba(247,237,216,.37);line-height:1.78;
+  font-family:var(--serif);font-size:15px;
+  color:rgba(245,236,215,.68);  /* warm, readable */
+  line-height:1.75;
 }
 
-/* ═══════════════════════════════════════════
-   FOLLOW — giant type with painted weight
-═══════════════════════════════════════════ */
+/* ══════════════════════════════════════════════
+   FOLLOW  — bold giant type
+══════════════════════════════════════════════ */
 #follow{
-  padding:80px 24px;
-  background:#08040A;text-align:center;
+  padding:80px 24px;background:var(--bg);text-align:center;
   position:relative;overflow:hidden;
 }
-#follow::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(var(--acc-rgb),.06) 0%,transparent 70%);
-}
 .fo-l1{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(56px,15vw,130px);
-  font-weight:700;color:#fff;line-height:.85;
-  position:relative;z-index:2;
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(50px,13vw,120px);font-weight:700;
+  color:#fff;line-height:.86;  /* white */
 }
 .fo-l2{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(56px,15vw,130px);
-  font-weight:700;color:rgba(255,255,255,.06);line-height:.85;
-  margin-bottom:36px;position:relative;z-index:2;
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(50px,13vw,120px);font-weight:700;
+  color:rgba(245,236,215,.1);line-height:.86;margin-bottom:32px;
 }
 .fo-link{
-  display:inline-flex;align-items:center;gap:9px;
-  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;
-  color:rgba(247,237,216,.32);text-decoration:none;
-  border-bottom:1px solid rgba(247,237,216,.08);padding-bottom:4px;
-  transition:all .35s;position:relative;z-index:2;
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--serif);font-style:italic;font-size:17px;
+  color:rgba(245,236,215,.55);  /* brighter than before */
+  text-decoration:none;
+  border-bottom:1px solid rgba(245,236,215,.15);padding-bottom:4px;
+  transition:all .35s;
 }
-.fo-link:hover{color:var(--gold);border-color:rgba(201,150,58,.45);}
-.fo-link svg{width:18px;height:18px;}
+.fo-link:hover{color:var(--gold2);border-color:rgba(232,201,122,.5);}
+.fo-link svg{width:17px;height:17px;}
 
-/* ═══════════════════════════════════════════
+/* ══════════════════════════════════════════════
    COUNTDOWN
-═══════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 #countdown{
-  padding:80px 24px;background:#0A050C;text-align:center;
+  padding:80px 24px;background:var(--bg2);text-align:center;
   position:relative;overflow:hidden;
 }
 #countdown::before{
   content:'';position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 60% 60% at 50% 50%,rgba(201,150,58,.04) 0%,transparent 65%);
+  background:radial-gradient(ellipse 55% 55% at 50% 50%,rgba(201,150,58,.05) 0%,transparent 65%);
 }
-.cd-label{
-  font-family:'Cinzel',serif;font-size:8px;letter-spacing:.45em;
-  text-transform:uppercase;color:rgba(201,150,58,.28);margin-bottom:28px;
-  position:relative;z-index:2;display:block;
+.cd-lbl{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.4em;
+  text-transform:uppercase;color:rgba(201,150,58,.55);  /* visible */
+  margin-bottom:24px;display:block;position:relative;z-index:2;
 }
 .cd-clock{
   display:flex;align-items:flex-start;justify-content:center;
-  position:relative;z-index:2;margin-bottom:36px;
+  position:relative;z-index:2;margin-bottom:32px;
 }
-.cd-unit{text-align:center;padding:0 clamp(10px,3vw,30px);}
-.cd-unit+.cd-unit{border-left:1px solid rgba(255,255,255,.04);}
+.cd-u{text-align:center;padding:0 clamp(10px,3vw,28px);}
+.cd-u+.cd-u{border-left:1px solid rgba(245,236,215,.08);}
 .cd-n{
-  display:block;
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(46px,12vw,100px);
-  font-weight:700;color:#fff;line-height:1;letter-spacing:-.01em;
+  display:block;font-family:var(--cinzel);
+  font-size:clamp(42px,11vw,96px);font-weight:700;
+  color:#fff;line-height:1;letter-spacing:-.01em;  /* white */
 }
 .cd-l{
-  display:block;font-family:'Nunito Sans',sans-serif;
-  font-size:8px;letter-spacing:.25em;text-transform:uppercase;
-  color:rgba(255,255,255,.16);margin-top:5px;
+  display:block;font-family:var(--sans);font-size:9px;
+  letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(245,236,215,.4);margin-top:4px;
 }
 .cd-note{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(16px,2vw,20px);color:rgba(247,237,216,.26);
-  max-width:440px;margin:0 auto;line-height:1.85;position:relative;z-index:2;
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(15px,2vw,19px);
+  color:rgba(245,236,215,.55);  /* readable */
+  max-width:420px;margin:0 auto;line-height:1.85;
+  position:relative;z-index:2;
 }
 
-/* ═══════════════════════════════════════════
+/* ══════════════════════════════════════════════
    FOOTER
-═══════════════════════════════════════════ */
+══════════════════════════════════════════════ */
 footer{
-  padding:48px 24px;background:#08040A;text-align:center;
-  border-top:1px solid rgba(255,255,255,.03);
+  padding:44px 24px;background:var(--bg);text-align:center;
+  border-top:1px solid rgba(201,150,58,.12);
 }
 .ft-n{
-  font-family:'Cinzel Decorative',serif;
-  font-size:clamp(16px,3.5vw,24px);color:rgba(255,255,255,.45);
-  letter-spacing:.06em;margin-bottom:8px;
+  font-family:var(--cinzel);font-size:clamp(16px,3.5vw,22px);
+  font-weight:600;color:rgba(245,236,215,.7);  /* visible */
+  letter-spacing:.06em;margin-bottom:6px;
 }
-.ft-h{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:14px;color:rgba(201,150,58,.3);
-}
+.ft-h{font-family:var(--serif);font-style:italic;font-size:14px;color:rgba(201,150,58,.5);}
 
-/* ═══════════════════════════════════════════
+/* ══════════════════════════════════════════════
    SCROLL REVEAL
-═══════════════════════════════════════════ */
-.rv{
-  opacity:0;transform:translateY(26px);
-  transition:opacity .95s var(--ease),transform .95s var(--ease);
-}
-.rv.d1{transition-delay:.1s;} .rv.d2{transition-delay:.22s;} .rv.d3{transition-delay:.34s;}
+══════════════════════════════════════════════ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+.rv.d1{transition-delay:.1s;}.rv.d2{transition-delay:.2s;}.rv.d3{transition-delay:.3s;}
 .rv.in{opacity:1;transform:none;}
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}
 }
-
-/* ── PERFORMANCE ─────────────────────────── */
-.hc-inner{will-change:transform;contain:layout style;}
-.hc-item img{will-change:auto;}
-.invite-card{will-change:opacity,transform;contain:layout;}
-.gate-left,.gate-right{will-change:transform;}
-#hero{contain:layout style paint;}
-.ev-scene{contain:layout style paint;}
-/* Reduce paint areas */
-body::before{will-change:auto;}
-/* Fast tap response on mobile */
-button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
-/* Prevent layout shift from fonts */
-.hero-groom,.hero-bride,.gate-groom,.gate-bride,.rsvp-big{font-display:swap;}
 </style>
 </head>
 <body class="locked">
 
-<!-- ═══ GATE ════════════════════════════════════════ -->
+<!-- ═══ GATE ══════════════════════════════════════ -->
 <div id="gate">
-  <div class="gate-left"></div>
-  <div class="gate-right"></div>
-  <div class="gate-center">
-    <span class="gate-Om" id="gOm"></span>
-    <span class="gate-tag">You Are Cordially Invited</span>
-    <span class="gate-groom" id="gGroom"></span>
-    <span class="gate-weds">weds</span>
-    <span class="gate-bride" id="gBride"></span>
-    <span class="gate-date"  id="gDate"></span>
-    <button class="gate-btn" id="gBtn">
-      Enter the Celebration
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </button>
-    <div class="gate-timer" id="gTimer"></div>
-  </div>
-</div>
-
-<button id="mBtn" aria-label="Toggle music">
-  <svg id="mOff" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z" opacity=".8"/><line x1="2" y1="2" x2="22" y2="22" stroke="currentColor" stroke-width="2"/></svg>
-  <svg id="mOn" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
-</button>
-<audio id="bgm" loop preload="none" playsinline></audio>
-
-<!-- ═══ HERO ══════════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-canvas"></div>
-  <!-- painted Indian flora SVG -->
-  <div class="hero-flora" aria-hidden="true">
-    <svg style="position:absolute;width:100%;height:100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <!-- top-left floral cluster -->
-      <g transform="translate(-60,-60)" opacity=".8">
-        <circle cx="120" cy="120" r="80" stroke="#C9963A" stroke-width="0.7"/>
-        <circle cx="120" cy="120" r="55" stroke="#C9963A" stroke-width="0.5"/>
-        <circle cx="120" cy="120" r="30" stroke="#C9963A" stroke-width="0.5"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(45 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(90 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(135 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(180 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(225 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(270 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".6" transform="rotate(315 120 120)"/>
+  <div class="gate-arch">
+    <svg viewBox="0 0 480 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M55 580 L55 260 Q55 50 240 50 Q425 50 425 260 L425 580" stroke="#C9963A" stroke-width=".9"/>
+      <path d="M75 580 L75 265 Q75 78 240 78 Q405 78 405 265 L405 580" stroke="#C9963A" stroke-width=".4" opacity=".5"/>
+      <circle cx="240" cy="50" r="14" stroke="#C9963A" stroke-width=".8"/>
+      <circle cx="240" cy="50" r="26" stroke="#C9963A" stroke-width=".4" opacity=".5"/>
+      <g opacity=".7">
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(0 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(45 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(90 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(135 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(180 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(225 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(270 240 50)"/>
+        <ellipse cx="240" cy="22" rx="5" ry="14" fill="none" stroke="#C9963A" stroke-width=".7" transform="rotate(315 240 50)"/>
       </g>
-      <!-- top-right -->
-      <g transform="translate(1380,-60)" opacity=".8">
-        <circle cx="120" cy="120" r="80" stroke="#C9963A" stroke-width="0.7"/>
-        <circle cx="120" cy="120" r="55" stroke="#C9963A" stroke-width="0.5"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".5" transform="rotate(0 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".5" transform="rotate(60 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".5" transform="rotate(120 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".5" transform="rotate(180 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".5" transform="rotate(240 120 120)"/>
-        <ellipse cx="120" cy="60" rx="8" ry="24" fill="#C9963A" opacity=".5" transform="rotate(300 120 120)"/>
-      </g>
-      <!-- bottom ornamental border line -->
-      <path d="M0 860 Q180 820 360 860 Q540 900 720 860 Q900 820 1080 860 Q1260 900 1440 860" stroke="#C9963A" stroke-width="0.6" opacity=".5"/>
-      <path d="M0 875 Q180 835 360 875 Q540 915 720 875 Q900 835 1080 875 Q1260 915 1440 875" stroke="#8B1A2A" stroke-width="0.4" opacity=".4"/>
-      <!-- diamond gems along border -->
-      <rect x="717" y="854" width="6" height="6" fill="#C9963A" opacity=".5" transform="rotate(45 720 857)"/>
-      <rect x="357" y="854" width="6" height="6" fill="#C9963A" opacity=".4" transform="rotate(45 360 857)"/>
-      <rect x="1077" y="854" width="6" height="6" fill="#C9963A" opacity=".4" transform="rotate(45 1080 857)"/>
+      <line x1="55" y1="360" x2="95" y2="360" stroke="#C9963A" stroke-width=".5" opacity=".4"/>
+      <line x1="385" y1="360" x2="425" y2="360" stroke="#C9963A" stroke-width=".5" opacity=".4"/>
+      <circle cx="55"  cy="360" r="4" stroke="#C9963A" stroke-width=".5" opacity=".4"/>
+      <circle cx="425" cy="360" r="4" stroke="#C9963A" stroke-width=".5" opacity=".4"/>
     </svg>
   </div>
-
-  <div class="hero-cols" id="heroCols"></div>
-
-  <div class="hero-txt">
-    <span class="hero-eyebrow">A Wedding Story · India · <span id="hYear"></span></span>
-    <span class="hero-groom" id="hGroom"></span>
-    <span class="hero-weds">weds</span>
-    <span class="hero-bride" id="hBride"></span>
-    <span class="hero-date"  id="hDate"></span>
+  <div class="gate-inner">
+    <span class="gate-om"   id="gOm"></span>
+    <span class="gate-tag">You Are Cordially Invited</span>
+    <span class="gate-groom" id="gG"></span>
+    <span class="gate-weds">weds</span>
+    <span class="gate-bride" id="gB"></span>
+    <span class="gate-date"  id="gD"></span>
+    <button class="gate-btn" id="gBtn">
+      Open Invitation
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </button>
+    <div class="gate-bar" id="gBar"></div>
   </div>
-  <div class="hero-scroll">Scroll to begin</div>
+</div>
+
+<!-- ═══ HERO ═══════════════════════════════════════ -->
+<section id="hero">
+  <div class="h-bloom"></div>
+  <div class="h-cols" id="hCols"></div>
+  <!-- Indian floral corner SVG -->
+  <div style="position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.1;" aria-hidden="true">
+    <svg style="position:absolute;width:100%;height:100%" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none">
+      <g transform="translate(-50,-50)"><circle cx="110" cy="110" r="76" stroke="#C9963A" stroke-width=".7"/><circle cx="110" cy="110" r="50" stroke="#C9963A" stroke-width=".5"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(45 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(90 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(135 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(180 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(225 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(270 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".5" transform="rotate(315 110 110)"/>
+      </g>
+      <g transform="translate(1390,-50)"><circle cx="110" cy="110" r="76" stroke="#C9963A" stroke-width=".7"/><circle cx="110" cy="110" r="50" stroke="#C9963A" stroke-width=".5"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".45" transform="rotate(0 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".45" transform="rotate(60 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".45" transform="rotate(120 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".45" transform="rotate(180 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".45" transform="rotate(240 110 110)"/>
+        <ellipse cx="110" cy="48" rx="7" ry="20" fill="#C9963A" opacity=".45" transform="rotate(300 110 110)"/>
+      </g>
+      <path d="M0 870 Q180 840 360 870 Q540 900 720 870 Q900 840 1080 870 Q1260 900 1440 870" stroke="#C9963A" stroke-width=".6" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="h-txt">
+    <span class="h-eye">A Wedding Story · India · <span id="hYr"></span></span>
+    <span class="h-groom" id="hG"></span>
+    <span class="h-weds">weds</span>
+    <span class="h-bride" id="hB"></span>
+    <span class="h-date"  id="hD"></span>
+  </div>
+  <div class="h-scroll">Scroll to begin</div>
 </section>
 
-<!-- garland divider -->
-<div class="divider-garland" aria-hidden="true">
-  <svg viewBox="0 0 1000 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 30 Q125 8 250 30 Q375 52 500 30 Q625 8 750 30 Q875 52 1000 30" stroke="#C9963A" stroke-width="0.9"/>
-    <path d="M0 30 Q125 52 250 30 Q375 8 500 30 Q625 52 750 30 Q875 8 1000 30" stroke="#8B1A2A" stroke-width="0.5" opacity=".55"/>
-    <circle cx="250" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="500" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="750" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="125" cy="19" r="3" fill="#8B1A2A" opacity=".4"/>
-    <circle cx="375" cy="41" r="3" fill="#8B1A2A" opacity=".4"/>
-    <circle cx="625" cy="19" r="3" fill="#8B1A2A" opacity=".4"/>
-    <circle cx="875" cy="41" r="3" fill="#8B1A2A" opacity=".4"/>
-    <!-- tiny diamond gems -->
-    <rect x="248" y="28" width="4" height="4" fill="#C9963A" opacity=".7" transform="rotate(45 250 30)"/>
-    <rect x="498" y="28" width="4" height="4" fill="#C9963A" opacity=".7" transform="rotate(45 500 30)"/>
-    <rect x="748" y="28" width="4" height="4" fill="#C9963A" opacity=".7" transform="rotate(45 750 30)"/>
+<!-- garland -->
+<div class="garland">
+  <svg viewBox="0 0 1000 52" fill="none"><path d="M0 26 Q125 6 250 26 Q375 46 500 26 Q625 6 750 26 Q875 46 1000 26" stroke="#C9963A" stroke-width=".9"/>
+    <circle cx="250" cy="26" r="4.5" fill="#C9963A" opacity=".55"/><circle cx="500" cy="26" r="4.5" fill="#C9963A" opacity=".55"/><circle cx="750" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="125" cy="16" r="2.5" fill="#9B2335" opacity=".45"/><circle cx="375" cy="36" r="2.5" fill="#9B2335" opacity=".45"/>
+    <circle cx="625" cy="16" r="2.5" fill="#9B2335" opacity=".45"/><circle cx="875" cy="36" r="2.5" fill="#9B2335" opacity=".45"/>
   </svg>
 </div>
 
-<!-- ═══ INVITATION ══════════════════════════════════════ -->
+<!-- ═══ INVITATION ═════════════════════════════════ -->
 <section id="invite">
-  <div class="invite-cloth"></div>
-  <!-- big mandala watermark -->
-  <svg class="invite-mandala" width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="300" cy="300" r="290" stroke="#C9963A" stroke-width="0.6"/>
-    <circle cx="300" cy="300" r="240" stroke="#C9963A" stroke-width="0.4"/>
-    <circle cx="300" cy="300" r="180" stroke="#C9963A" stroke-width="0.4"/>
-    <circle cx="300" cy="300" r="120" stroke="#C9963A" stroke-width="0.5"/>
-    <circle cx="300" cy="300" r="60"  stroke="#C9963A" stroke-width="0.6"/>
-    <!-- 16 petal ring -->
-    <g id="petals">
-      <ellipse cx="300" cy="130" rx="10" ry="34" fill="#C9963A" opacity=".3"/>
-    </g>
-    <use href="#petals" transform="rotate(22.5 300 300)"/>
-    <use href="#petals" transform="rotate(45 300 300)"/>
-    <use href="#petals" transform="rotate(67.5 300 300)"/>
-    <use href="#petals" transform="rotate(90 300 300)"/>
-    <use href="#petals" transform="rotate(112.5 300 300)"/>
-    <use href="#petals" transform="rotate(135 300 300)"/>
-    <use href="#petals" transform="rotate(157.5 300 300)"/>
-    <use href="#petals" transform="rotate(180 300 300)"/>
-    <use href="#petals" transform="rotate(202.5 300 300)"/>
-    <use href="#petals" transform="rotate(225 300 300)"/>
-    <use href="#petals" transform="rotate(247.5 300 300)"/>
-    <use href="#petals" transform="rotate(270 300 300)"/>
-    <use href="#petals" transform="rotate(292.5 300 300)"/>
-    <use href="#petals" transform="rotate(315 300 300)"/>
-    <use href="#petals" transform="rotate(337.5 300 300)"/>
+  <div class="inv-gbleed" id="invG"></div>
+  <div class="inv-bbleed" id="invB"></div>
+  <!-- mandala watermark -->
+  <svg style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(580px,85vw);opacity:.04;pointer-events:none;z-index:0;" viewBox="0 0 580 580" fill="none" aria-hidden="true">
+    <circle cx="290" cy="290" r="278" stroke="#C9963A" stroke-width=".7"/>
+    <circle cx="290" cy="290" r="220" stroke="#C9963A" stroke-width=".5"/>
+    <circle cx="290" cy="290" r="160" stroke="#C9963A" stroke-width=".5"/>
+    <circle cx="290" cy="290" r="100" stroke="#C9963A" stroke-width=".6"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(22.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(45 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(67.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(90 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(112.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(135 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(157.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(180 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(202.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(225 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(247.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(270 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(292.5 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(315 290 290)"/>
+    <ellipse cx="290" cy="100" rx="10" ry="30" fill="#C9963A" opacity=".35" transform="rotate(337.5 290 290)"/>
   </svg>
-  <div class="invite-groom-bleed" id="invGroomBleed"></div>
-  <div class="invite-bride-bleed"  id="invBrideBleed"></div>
-  <div class="invite-card rv">
-    <div class="ic-corner tl"></div>
-    <div class="ic-corner tr"></div>
-    <div class="ic-corner bl"></div>
-    <div class="ic-corner br"></div>
-    <div class="ic-om"   id="icOm"></div>
-    <div class="ic-rule"></div>
-    <div class="ic-gp"   id="icGp"></div>
-    <div class="ic-rule"></div>
-    <div class="ic-label">Invite</div>
-    <div class="ic-invite">You to join us in the wedding celebrations of</div>
-    <span class="ic-groom" id="icG"></span>
-    <div class="ic-person-tag">Son of</div>
-    <div class="ic-person-parents" id="icGroomPar"></div>
-    <span class="ic-and">&</span>
-    <span class="ic-bride" id="icB"></span>
-    <div class="ic-person-tag">Daughter of</div>
-    <div class="ic-person-parents" id="icBridePar"></div>
-    <div class="ic-rule" style="margin-top:22px;"></div>
-    <div class="ic-events-tag">On the following events ↓</div>
+  <div class="inv-card rv">
+    <div class="inv-c tl"></div><div class="inv-c tr"></div>
+    <div class="inv-c bl"></div><div class="inv-c br"></div>
+    <div class="inv-om"   id="iOm"></div>
+    <div class="inv-rule"></div>
+    <div class="inv-gp"   id="iGp"></div>
+    <div class="inv-rule"></div>
+    <div class="inv-label">Invite</div>
+    <div class="inv-sub">You to join us in the wedding celebrations of</div>
+    <!-- GROOM -->
+    <span class="inv-name" id="iGN"></span>
+    <div class="inv-ptag">Son of</div>
+    <div class="inv-pname" id="iGPar"></div>
+    <span class="inv-and">&</span>
+    <!-- BRIDE -->
+    <span class="inv-name" id="iBN"></span>
+    <div class="inv-ptag">Daughter of</div>
+    <div class="inv-pname" id="iBPar"></div>
+    <div class="inv-rule" style="margin-top:20px;"></div>
+    <div class="inv-tag">On the following events ↓</div>
   </div>
 </section>
 
-<div class="divider-garland" aria-hidden="true">
-  <svg viewBox="0 0 1000 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 30 Q125 8 250 30 Q375 52 500 30 Q625 8 750 30 Q875 52 1000 30" stroke="#C9963A" stroke-width="0.9"/>
-    <circle cx="250" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="500" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="750" cy="30" r="5" fill="#C9963A" opacity=".5"/>
+<div class="garland">
+  <svg viewBox="0 0 1000 52" fill="none"><path d="M0 26 Q125 6 250 26 Q375 46 500 26 Q625 6 750 26 Q875 46 1000 26" stroke="#C9963A" stroke-width=".9"/>
+    <circle cx="250" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="500" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="750" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
   </svg>
 </div>
 
-<!-- ═══ EVENTS ══════════════════════════════════════════ -->
+<!-- ═══ EVENTS ══════════════════════════════════════ -->
 <section id="events">
-  <div class="ev-section-head">
-    <div class="ev-sh-tag rv">Join us for</div>
-    <div class="ev-sh-title rv d1">The Celebrations</div>
+  <div class="ev-head">
+    <div class="ev-head-tag rv">Join us for</div>
+    <div class="ev-head-title rv d1">The Celebrations</div>
   </div>
-  <div class="ev-scroll" id="evScroll"></div>
+  <div class="ev-track" id="evTrack"></div>
 </section>
 
-<div class="divider-garland" aria-hidden="true">
-  <svg viewBox="0 0 1000 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M0 30 Q125 8 250 30 Q375 52 500 30 Q625 8 750 30 Q875 52 1000 30" stroke="#C9963A" stroke-width="0.9"/>
-    <circle cx="250" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="500" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="750" cy="30" r="5" fill="#C9963A" opacity=".5"/>
+<div class="garland">
+  <svg viewBox="0 0 1000 52" fill="none"><path d="M0 26 Q125 6 250 26 Q375 46 500 26 Q625 6 750 26 Q875 46 1000 26" stroke="#C9963A" stroke-width=".9"/>
+    <circle cx="250" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="500" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="750" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
   </svg>
 </div>
 
-<!-- ═══ MEET THE COUPLE ═════════════════════════════════ -->
+<!-- ═══ COUPLE ═══════════════════════════════════════ -->
 <section id="couple">
-  <div class="cp-bg"></div>
-  <div class="cp-wrap">
-    <div class="cp-photo-side rv">
-      <div class="cp-photo-main" id="cpPhoto"></div>
-    </div>
-    <div class="cp-text-side rv d2">
-      <div class="cp-eyebrow">Meet the couple</div>
-      <h2 class="cp-heading"><strong>Bride</strong> &amp; <strong>Groom</strong></h2>
+  <div class="cp-grid">
+    <div class="cp-photo rv" id="cpPh"></div>
+    <div class="cp-text rv d2">
+      <div class="cp-eye">Meet the couple</div>
+      <h2 class="cp-title"><strong>Bride</strong> &amp; <strong>Groom</strong></h2>
       <div class="cp-rule"></div>
       <p class="cp-note" id="cpNote"></p>
-      <div class="cp-gallery">
-        <div class="cp-gallery-track" id="cpTrack"></div>
-      </div>
+      <div class="cp-gal"><div class="cp-gal-track" id="cpTrack"></div></div>
       <div class="cp-nav">
-        <button id="cpPrev">&#8249;</button>
-        <button id="cpNext">&#8250;</button>
+        <button id="cpP">&#8249;</button>
+        <button id="cpN">&#8250;</button>
       </div>
     </div>
   </div>
 </section>
 
-<div class="divider-garland" aria-hidden="true">
-  <svg viewBox="0 0 1000 60" fill="none">
-    <path d="M0 30 Q125 8 250 30 Q375 52 500 30 Q625 8 750 30 Q875 52 1000 30" stroke="#C9963A" stroke-width="0.9"/>
-    <circle cx="250" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="500" cy="30" r="5" fill="#C9963A" opacity=".5"/>
-    <circle cx="750" cy="30" r="5" fill="#C9963A" opacity=".5"/>
+<div class="garland">
+  <svg viewBox="0 0 1000 52" fill="none"><path d="M0 26 Q125 6 250 26 Q375 46 500 26 Q625 6 750 26 Q875 46 1000 26" stroke="#C9963A" stroke-width=".9"/>
+    <circle cx="250" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="500" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
+    <circle cx="750" cy="26" r="4.5" fill="#C9963A" opacity=".55"/>
   </svg>
 </div>
 
-<!-- ═══ RSVP ══════════════════════════════════════════════ -->
+<!-- ═══ RSVP ════════════════════════════════════════ -->
 <section id="rsvp">
-  <div class="rsvp-canvas"></div>
-  <div class="rsvp-wm" id="rsvpWm"></div>
+  <div class="rsvp-bloom"></div>
+  <div class="rsvp-wm" id="rWm"></div>
   <div class="rsvp-inner">
     <span class="rsvp-please rv">Please</span>
     <span class="rsvp-big rv d1">RSVP</span>
@@ -1151,44 +903,44 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
       <div class="wa-icon">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4c-4.9 0-8.9 4-8.9 8.9 0 1.57.42 3.1 1.2 4.44L3 21l3.78-1.32a8.9 8.9 0 0 0 4.27 1.09h.01c4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.62-2.36-6.55zm-5.55 13.7h-.01a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.98.94-2.73-.18-.28a7.38 7.38 0 0 1-1.13-3.93c0-4.08 3.32-7.4 7.4-7.4a7.36 7.36 0 0 1 5.24 2.17 7.36 7.36 0 0 1 2.17 5.24c0 4.08-3.32 7.4-7.4 7.4zm4.06-5.54c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11s-.57.72-.7.87-.26.17-.48.06a6.05 6.05 0 0 1-3-2.62c-.23-.39.23-.36.65-1.2.07-.15.04-.28-.02-.39s-.5-1.2-.68-1.64c-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.57 2.4 3.8 3.36.53.23.94.36 1.26.47.53.17 1.01.14 1.39.09.42-.06 1.31-.54 1.5-1.06.18-.52.18-.96.13-1.06-.05-.1-.2-.16-.42-.27z"/></svg>
       </div>
-      <div class="wa-texts">
-        <div class="wa-label">Click to message on WhatsApp</div>
+      <div class="wa-t">
+        <div class="wa-lbl">Click to message on WhatsApp</div>
         <div class="wa-cta">Confirm Your Attendance</div>
       </div>
     </a>
   </div>
 </section>
 
-<!-- ═══ THINGS TO KNOW ══════════════════════════════════ -->
+<!-- ═══ THINGS TO KNOW ═══════════════════════════════ -->
 <section id="things">
   <div class="th-head">
-    <div class="th-eyebrow rv">Before you arrive</div>
+    <div class="th-eye rv">Before you arrive</div>
     <div class="th-title rv d1"><em>Things</em> to know</div>
-    <div class="th-sub rv d2">A few details to help you arrive with ease and enjoy every moment of our celebrations.</div>
+    <div class="th-sub rv d2">A few details to help you enjoy every moment of our celebrations.</div>
   </div>
   <div class="th-grid" id="thGrid"></div>
 </section>
 
-<!-- ═══ FOLLOW ═══════════════════════════════════════════ -->
+<!-- ═══ FOLLOW ═══════════════════════════════════════ -->
 <section id="follow">
   <span class="fo-l1 rv">Follow</span>
   <span class="fo-l2 rv d1">the action</span>
   <a class="fo-link rv d2" id="foLink" href="#" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
     Click to open our Instagram page
   </a>
 </section>
 
-<!-- ═══ COUNTDOWN ════════════════════════════════════════ -->
+<!-- ═══ COUNTDOWN ═══════════════════════════════════ -->
 <section id="countdown">
-  <span class="cd-label rv">The countdown begins</span>
+  <span class="cd-lbl rv">The countdown begins</span>
   <div class="cd-clock rv d1">
-    <div class="cd-unit"><span class="cd-n" id="cdD">00</span><span class="cd-l">Days</span></div>
-    <div class="cd-unit"><span class="cd-n" id="cdH">00</span><span class="cd-l">Hours</span></div>
-    <div class="cd-unit"><span class="cd-n" id="cdM">00</span><span class="cd-l">Mins</span></div>
-    <div class="cd-unit"><span class="cd-n" id="cdS">00</span><span class="cd-l">Secs</span></div>
+    <div class="cd-u"><span class="cd-n" id="cdD">00</span><span class="cd-l">Days</span></div>
+    <div class="cd-u"><span class="cd-n" id="cdH">00</span><span class="cd-l">Hours</span></div>
+    <div class="cd-u"><span class="cd-n" id="cdM">00</span><span class="cd-l">Mins</span></div>
+    <div class="cd-u"><span class="cd-n" id="cdS">00</span><span class="cd-l">Secs</span></div>
   </div>
-  <p class="cd-note rv d2">Our families are excited that you are able to join us in celebrating what we hope will be one of the happiest days of our lives.</p>
+  <p class="cd-note rv d2">Our families are so excited to celebrate this beautiful moment with all of you. We look forward to seeing you there.</p>
 </section>
 
 <footer>
@@ -1202,132 +954,115 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
   const pad=(n,w=2)=>String(Math.max(0,n)).padStart(w,'0');
   function T(id,v){const e=$(id);if(e)e.textContent=v;}
   function H(id,v){const e=$(id);if(e)e.innerHTML=v;}
-  function img(src,alt,fb){
+  function mkImg(src,alt,fb){
     const i=document.createElement('img');
-    i.src=src;i.alt=alt||'';
+    i.src=src;i.alt=alt||'';i.loading='lazy';i.decoding='async';
     i.style.cssText='width:100%;height:100%;object-fit:cover;';
     if(fb)i.onerror=function(){this.parentElement.textContent=fb;};
     return i;
   }
 
-  /* apply accent color */
-  const acc=W.accentColor||'#8B1A2A';
+  /* apply accent */
+  const acc=W.accent||'#9B2335';
   document.documentElement.style.setProperty('--acc',acc);
-  /* compute rgb for CSS */
   const r=parseInt(acc.slice(1,3),16),g=parseInt(acc.slice(3,5),16),b=parseInt(acc.slice(5,7),16);
   document.documentElement.style.setProperty('--acc-rgb',`${r},${g},${b}`);
 
-  /* dates */
-  const wDate=new Date(W.weddingDate);
-  const ok=!isNaN(wDate);
+  /* date */
+  const wDate=new Date(W.weddingDate),ok=!isNaN(wDate);
   const dl=ok?wDate.toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'}):'';
 
   document.title=`${W.groom} & ${W.bride} — Wedding`;
 
   /* GATE */
-  T('gOm',   W.blessing||'ॐ');
-  T('gGroom',W.groom);  T('gBride',W.bride);
-  T('gDate', dl);
+  T('gOm',W.blessing||'ॐ'); T('gG',W.groom); T('gB',W.bride); T('gD',dl);
 
   /* HERO */
-  T('hYear', ok?wDate.getFullYear():'2026');
-  T('hGroom',W.groom);  T('hBride',W.bride);
-  T('hDate', dl?dl+' · India':'');
+  T('hYr',ok?wDate.getFullYear():'2026');
+  T('hG',W.groom); T('hB',W.bride);
+  T('hD',dl?dl+' · India':'');
 
-  /* HERO COLUMNS — deferred until after gate opens */
-  const photos=(W.photos||[]);
+  /* HERO COLUMNS — built after gate opens */
+  const photos=W.photos||[];
   const emj=['🌸','🪷','✨','🌹','💍','🎊','🥰','🌺','💑','🪔'];
-  const colWrap=$('heroCols');
   function buildCols(){
-    const COLS=window.innerWidth<600?3:5;
+    const COLS=window.innerWidth<600?3:4;
+    const wrap=$('hCols');
     for(let c=0;c<COLS;c++){
       const col=document.createElement('div'); col.className='hc';
-      const spd=16+c*2.5; col.style.setProperty('--s',spd+'s');
-      const inner=document.createElement('div'); inner.className='hc-inner';
+      col.style.setProperty('--s',(20+c*3)+'s');
+      const inn=document.createElement('div'); inn.className='hc-inn';
       const half=[];
-      for(let i=0;i<6;i++) half.push(photos.length?photos[(c*2+i)%photos.length]:null);
+      for(let i=0;i<5;i++) half.push(photos.length?photos[(c*2+i)%photos.length]:null);
       [...half,...half].forEach((src,i)=>{
-        const d=document.createElement('div'); d.className='hc-item';
+        const d=document.createElement('div'); d.className='hc-ph';
         if(src){
           const fb=emj[i%emj.length];
-          d.innerHTML=`<img decoding="async" src="${src}" alt="" loading="lazy" fetchpriority="low" onerror="this.parentElement.textContent='${fb}'">`;
+          d.innerHTML=`<img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.parentElement.textContent='${fb}'">`;
         } else {
-          d.innerHTML=`<div style="display:flex;align-items:center;justify-content:center;width:100%;height:100%;font-size:28px;color:rgba(201,150,58,.15)">${emj[i%emj.length]}</div>`;
+          d.style.cssText='display:flex;align-items:center;justify-content:center;font-size:26px;color:rgba(201,150,58,.18);';
+          d.textContent=emj[i%emj.length];
         }
-        inner.appendChild(d);
+        inn.appendChild(d);
       });
-      col.appendChild(inner); colWrap.appendChild(col);
+      col.appendChild(inn); wrap.appendChild(col);
     }
   }
 
   /* INVITATION */
-  T('icOm', W.blessing || 'ॐ');
-  H('icGp', `With the heavenly blessings of<br>${W.grandparents || ''}`);
-  T('icG',  W.groom);
-  T('icB',  W.bride);
-  if(W.groomParents) T('icGroomPar', W.groomParents);
-  if(W.brideParents) T('icBridePar', W.brideParents);
-  /* photo bleeds */
-  if(W.groomPhoto){const gb=$('invGroomBleed'); gb.appendChild(img(W.groomPhoto,W.groom,'🤵'));}
-  if(W.bridePhoto) {const bb=$('invBrideBleed');  bb.appendChild(img(W.bridePhoto, W.bride, '👰'));}
+  T('iOm',W.blessing||'ॐ');
+  H('iGp',`With the heavenly blessings of<br>${W.grandparents||''}`);
+  T('iGN',W.groom); T('iBN',W.bride);
+  if(W.groomParents)T('iGPar',W.groomParents);
+  if(W.brideParents)T('iBPar',W.brideParents);
+  if(W.groomPhoto){const d=$('invG');d.appendChild(mkImg(W.groomPhoto,W.groom,'🤵'));}
+  if(W.bridePhoto) {const d=$('invB');d.appendChild(mkImg(W.bridePhoto,W.bride,'👰'));}
 
   /* EVENTS */
-  const evIcons=['🌼','💃','🌿','🪷','🥂'];
-  const evS=$('evScroll');
+  const icons=['🌼','💃','🌿','🪷','🥂'];
+  const et=$('evTrack');
   (W.events||[]).forEach((ev,i)=>{
-    const c=document.createElement('div'); c.className='ev-scene rv';
+    const c=document.createElement('div'); c.className='ev-card rv';
     c.innerHTML=`
-      <div class="ev-paint"></div>
-      <div class="ev-stroke"></div>
-      <div class="ev-waternum">${String(i+1).padStart(2,'0')}</div>
-      <svg class="ev-art" viewBox="0 0 180 180" fill="none">
-        <circle cx="90" cy="90" r="85" stroke="#C9963A" stroke-width="0.5"/>
-        <circle cx="90" cy="90" r="60" stroke="#C9963A" stroke-width="0.4"/>
-        <circle cx="90" cy="90" r="35" stroke="#C9963A" stroke-width="0.4"/>
-        ${[0,40,80,120,160,200,240,280].map(a=>`<ellipse cx="90" cy="28" rx="6" ry="18" fill="#C9963A" opacity=".4" transform="rotate(${a} 90 90)"/>`).join('')}
-      </svg>
+      <div class="ev-card-top"></div>
+      <div class="ev-ghost">${String(i+1).padStart(2,'0')}</div>
       <div class="ev-body">
-        <span class="ev-icon">${evIcons[i%evIcons.length]}</span>
-        <div class="ev-ceremony">${ev.name}</div>
+        <span class="ev-icon">${icons[i%icons.length]}</span>
+        <div class="ev-name">${ev.name}</div>
         <div class="ev-date">${ev.date}</div>
         <div class="ev-venue">${ev.venue||''}</div>
         <div class="ev-time">${ev.time||''}</div>
         ${ev.map?`<a class="ev-route" href="${ev.map}" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="11" height="11"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
           See the route</a>`:''}
       </div>`;
-    evS.appendChild(c);
+    et.appendChild(c);
   });
 
   /* COUPLE */
-  const cpPhoto=$('cpPhoto');
+  const cpPh=$('cpPh');
   const cpSrc=W.bridePhoto||W.groomPhoto||(photos.length?photos[0]:null);
-  if(cpSrc)cpPhoto.appendChild(img(cpSrc,'Couple','💑'));
-  else cpPhoto.textContent='💑';
-  T('cpNote',W.coupleNote||'We are both so delighted that you are able to join us in celebrating what we hope will be one of the happiest days of our lives.');
-  const cpTrack=$('cpTrack');
-  const galPh=photos.length?photos:[null,null,null];
-  galPh.forEach((src,i)=>{
-    const s=document.createElement('div'); s.className='cp-gslide';
+  if(cpSrc)cpPh.appendChild(mkImg(cpSrc,'Couple','💑'));
+  else cpPh.textContent='💑';
+  T('cpNote',W.coupleNote||'');
+  const cpT=$('cpTrack');
+  const gPh=photos.length?photos:[null,null,null];
+  gPh.forEach((src,i)=>{
+    const s=document.createElement('div'); s.className='cp-gal-slide';
     if(src){
       const fb=emj[i%emj.length];
-      s.innerHTML=`<img decoding="async" src="${src}" alt="" loading="lazy" onerror="this.parentElement.textContent='${fb}'" style="width:100%;height:100%;object-fit:cover;">`;
+      s.innerHTML=`<img src="${src}" alt="" loading="lazy" decoding="async" onerror="this.parentElement.textContent='${fb}'" style="width:100%;height:100%;object-fit:cover;">`;
     } else { s.textContent=emj[i%emj.length]; }
-    cpTrack.appendChild(s);
+    cpT.appendChild(s);
   });
-  let cpIdx=0;
-  const maxIdx=Math.max(0,galPh.length-3);
-  function slideTo(i){
-    cpIdx=Math.max(0,Math.min(maxIdx,i));
-    const w=cpTrack.parentElement.offsetWidth;
-    cpTrack.style.transform=`translateX(-${cpIdx*(w/3+1)}px)`;
-  }
-  $('cpPrev').onclick=()=>slideTo(cpIdx-1);
-  $('cpNext').onclick=()=>slideTo(cpIdx+1);
-  setInterval(()=>slideTo(cpIdx<maxIdx?cpIdx+1:0),2800);
+  let ci=0,cMax=Math.max(0,gPh.length-3);
+  function slide(i){ci=Math.max(0,Math.min(cMax,i));const w=cpT.parentElement.offsetWidth;cpT.style.transform=`translateX(-${ci*(w/3+1)}px)`;}
+  $('cpP').onclick=()=>slide(ci-1);
+  $('cpN').onclick=()=>slide(ci+1);
+  setInterval(()=>slide(ci<cMax?ci+1:0),3000);
 
   /* RSVP */
-  $('rsvpWm').textContent=W.groom+'  &  '+W.bride;
+  $('rWm').textContent=W.groom+'  &  '+W.bride;
   if(W.whatsapp){
     const msg=encodeURIComponent(W.whatsappMsg||`Hi! Confirming for ${W.groom} & ${W.bride}'s wedding 🎉`);
     $('waLink').href=`https://wa.me/${W.whatsapp}?text=${msg}`;
@@ -1337,7 +1072,7 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
   const tg=$('thGrid');
   (W.thingsToKnow||[]).forEach(tk=>{
     const c=document.createElement('div'); c.className='tk rv';
-    c.innerHTML=`<div class="tk-title">${tk.title}</div><div class="tk-text">${tk.text}</div>`;
+    c.innerHTML=`<span class="tk-icon">${tk.icon||'✦'}</span><div class="tk-title">${tk.title}</div><div class="tk-text">${tk.text}</div>`;
     tg.appendChild(c);
   });
 
@@ -1360,47 +1095,28 @@ button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation;}
   T('ftN',`${W.groom} & ${W.bride}`);
   T('ftH',W.hashtag||`#${W.groom}Weds${W.bride}`);
 
-  /* MUSIC — loaded only after gate opens to not block initial render */
-  const bgm=$('bgm'),mBtn=$('mBtn');
-  let mOn=false,musicLoaded=false;
-  function loadMusic(){
-    if(musicLoaded||!W.music)return;
-    musicLoaded=true;
-    const s=document.createElement('source');s.src=W.music;s.type='audio/mpeg';bgm.appendChild(s);
-  }
-  function setM(on){mOn=on;mBtn.classList.toggle('on',on);$('mOff').style.display=on?'none':'';$('mOn').style.display=on?'':'none';}
-  function playM(){loadMusic();setTimeout(()=>{bgm.volume=.3;bgm.muted=false;bgm.play().then(()=>setM(true)).catch(()=>{});},80);}
-  mBtn.addEventListener('click',()=>{if(mOn){bgm.pause();setM(false);}else playM();});
-
-  /* GATE */
-  const gate=$('gate'),gTimer=$('gTimer'),gBtn=$('gBtn');
+  /* ── GATE — opens instantly on click ── */
+  const gate=$('gate'),gBar=$('gBar'),gBtn=$('gBtn');
   let opened=false;
-  function openGate(withMusic){
+  function open(){
     if(opened)return;opened=true;
-    gate.classList.add('open');
+    gate.classList.add('out');
     document.body.classList.remove('locked');
-    // Build heavy DOM after gate starts animating — user sees smooth curtain open
-    requestAnimationFrame(()=>{
-      buildCols();
-      loadMusic();
-      if(withMusic)playM();
-      initReveal();
-    });
-    setTimeout(()=>{gate.style.display='none';mBtn.classList.add('show');},900);
-  }
-  gBtn.addEventListener('click',()=>openGate(true),{once:true});
-  const A=4000,t0=Date.now();
-  (function bar(){if(opened)return;const p=Math.min(100,(Date.now()-t0)/A*100);gTimer.style.width=p+'%';if(p<100)requestAnimationFrame(bar);})();
-  setTimeout(()=>openGate(false),A);
-
-  /* SCROLL REVEAL — deferred so gate opens instantly */
-  function initReveal(){
+    buildCols();  /* build photo columns only after user opens */
+    setTimeout(()=>gate.style.display='none',650);
+    /* init scroll reveal */
     const ro=new IntersectionObserver(entries=>{
       entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});
-    },{threshold:.06,rootMargin:'0px 0px -10px 0px'});
+    },{threshold:.05,rootMargin:'0px 0px 0px 0px'});
     document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
   }
-  /* reveal init called from openGate */
+  gBtn.addEventListener('click',open,{once:true});
+
+  /* auto open after 1.5s with progress bar */
+  const A=1500,t0=Date.now();
+  (function bar(){if(opened)return;const p=Math.min(100,(Date.now()-t0)/A*100);gBar.style.width=p+'%';if(p<100)requestAnimationFrame(bar);})();
+  setTimeout(()=>open(),A);
+
 })();
 </script>
 </body>
