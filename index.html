@@ -27,7 +27,7 @@ const W = {
 
   groomPhoto:  "Groom.jpg",
   bridePhoto:  "Bride.jpg",
-  photos: ["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg","photo6.jpg"],
+  photos: ["photo1.jpg","photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg"],
 
   /* Accent: match bride lehenga — #9B2335 red · #5C2D82 purple · #1B5E3B green */
   accent: "#9B2335",
@@ -327,10 +327,22 @@ img{display:block;}
   font-size:14px;color:rgba(245,236,215,.8);  /* bright ivory */
   line-height:1.6;margin-bottom:8px;
 }
+.inv-person{
+  text-align:center;
+  padding:4px 0;
+}
+.inv-sep{
+  display:flex;align-items:center;gap:12px;
+  margin:16px 0;
+}
+.inv-sep-line{
+  flex:1;height:1px;
+  background:linear-gradient(to right,transparent,rgba(232,201,122,.3),transparent);
+}
 .inv-and{
-  display:block;font-family:var(--serif);font-style:italic;
-  font-size:clamp(20px,4vw,30px);color:var(--gold2);
-  letter-spacing:.18em;margin:10px 0;
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(22px,4vw,34px);color:var(--gold2);
+  letter-spacing:.14em;flex-shrink:0;
 }
 .inv-tag{
   font-family:var(--cinzel);font-size:8px;letter-spacing:.3em;
@@ -478,9 +490,12 @@ img{display:block;}
 .cp-gal{overflow:hidden;}
 .cp-gal-track{display:flex;gap:3px;transition:transform .38s var(--ease);}
 .cp-gal-slide{
-  flex-shrink:0;width:calc(33.333% - 2px);aspect-ratio:3/4;
+  flex-shrink:0;
+  width:calc(33.333% - 2px);
+  aspect-ratio:3/4;
   overflow:hidden;background:var(--bg3);cursor:pointer;
   display:flex;align-items:center;justify-content:center;font-size:22px;
+  min-width:80px;
 }
 .cp-gal-slide img{width:100%;height:100%;object-fit:cover;filter:brightness(.8);transition:transform .4s;}
 .cp-gal-slide:hover img{transform:scale(1.05);}
@@ -497,68 +512,6 @@ img{display:block;}
   .cp-photo{min-height:55vw;}
   .cp-photo::after{background:linear-gradient(to bottom,transparent 60%,var(--bg) 100%);}
   .cp-text{padding:28px 20px;}
-}
-
-/* ══════════════════════════════════════════════
-   RSVP  — rich warm canvas
-══════════════════════════════════════════════ */
-#rsvp{
-  position:relative;overflow:hidden;min-height:90vh;
-  display:flex;align-items:center;justify-content:center;
-  padding:80px 24px;text-align:center;
-  background:linear-gradient(160deg,var(--bg) 0%,#2E1008 50%,var(--bg2) 100%);
-}
-.rsvp-bloom{
-  position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 85% 70% at 50% 50%,rgba(155,35,53,.18) 0%,transparent 70%);
-}
-/* large calligraphy watermark — READABLE colour */
-.rsvp-wm{
-  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-  pointer-events:none;z-index:0;
-  font-family:var(--serif);font-style:italic;
-  font-size:clamp(80px,18vw,180px);font-weight:300;
-  color:rgba(155,35,53,.08);
-  white-space:nowrap;letter-spacing:-.02em;
-}
-.rsvp-inner{position:relative;z-index:5;}
-.rsvp-please{
-  font-family:var(--cinzel);font-size:10px;letter-spacing:.5em;
-  text-transform:uppercase;
-  color:rgba(232,201,122,.6);  /* visible gold */
-  margin-bottom:6px;display:block;
-}
-.rsvp-big{
-  font-family:var(--cinzel);
-  font-size:clamp(64px,17vw,160px);
-  font-weight:700;color:#fff;  /* pure white */
-  line-height:.8;margin-bottom:48px;letter-spacing:.06em;display:block;
-  text-shadow:0 0 80px rgba(155,35,53,.4);
-}
-.rsvp-wa{
-  display:inline-flex;align-items:center;gap:16px;
-  border:1px solid rgba(245,236,215,.12);
-  background:rgba(245,236,215,.04);
-  padding:20px 30px;text-decoration:none;
-  transition:all .4s;max-width:380px;width:100%;
-}
-.rsvp-wa:hover{border-color:rgba(37,211,102,.4);background:rgba(37,211,102,.06);}
-.wa-icon{
-  width:44px;height:44px;border-radius:50%;flex-shrink:0;
-  background:rgba(37,211,102,.14);
-  display:flex;align-items:center;justify-content:center;
-}
-.wa-icon svg{width:22px;height:22px;color:#25d166;}
-.wa-t{text-align:left;}
-.wa-lbl{
-  font-family:var(--cinzel);font-size:8px;letter-spacing:.22em;
-  text-transform:uppercase;
-  color:rgba(245,236,215,.5);  /* visible */
-  margin-bottom:3px;
-}
-.wa-cta{
-  font-family:var(--serif);font-size:18px;
-  color:#fff;  /* white — easy to read */
 }
 
 /* ══════════════════════════════════════════════
@@ -701,6 +654,61 @@ footer{
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;}
 }
+
+/* ══════════════════════════════════════════════
+   ANJANADRI WEDDINGS BANNER — sticky bottom
+══════════════════════════════════════════════ */
+#biz-banner{
+  position:sticky;bottom:0;left:0;right:0;z-index:500;
+  background:linear-gradient(135deg,var(--gold) 0%,#7A5A1A 100%);
+  padding:16px 20px;text-align:center;overflow:hidden;
+  box-shadow:0 -6px 28px rgba(0,0,0,0.35);
+}
+#biz-banner::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.14) 0%,transparent 65%);
+  pointer-events:none;
+}
+.biz-inner{
+  max-width:680px;margin:0 auto;position:relative;z-index:1;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+}
+.biz-couple{
+  font-family:var(--cinzel);font-size:11px;letter-spacing:.15em;
+  text-transform:uppercase;color:rgba(26,12,4,.55);
+}
+.biz-couple b{color:#1C0F0A;font-weight:700;}
+.biz-label{
+  font-family:var(--cinzel);font-size:9px;letter-spacing:.3em;
+  text-transform:uppercase;color:rgba(26,12,4,.6);
+}
+.biz-name{
+  font-family:var(--cinzel);font-size:clamp(16px,2.5vw,21px);
+  letter-spacing:.08em;color:#1C0F0A;font-weight:700;
+}
+.biz-sub{
+  font-family:var(--serif);font-style:italic;
+  font-size:14px;color:rgba(26,12,4,.7);
+  max-width:460px;line-height:1.55;
+}
+.biz-cta{
+  display:inline-flex;align-items:center;gap:9px;margin-top:4px;
+  background:#1C0F0A;color:#25D366;
+  padding:11px 24px;border-radius:28px;
+  text-decoration:none;font-family:var(--cinzel);
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;box-shadow:0 6px 20px rgba(0,0,0,.28);
+  transition:transform .3s,box-shadow .3s;white-space:nowrap;
+}
+.biz-cta:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.38);}
+.biz-cta svg{width:16px;height:16px;flex-shrink:0;}
+@media(max-width:600px){
+  #biz-banner{padding:10px 14px;}
+  .biz-label{display:none;}
+  .biz-sub{display:none;}
+  .biz-name{font-size:14px;}
+  .biz-cta{padding:9px 18px;font-size:10px;}
+}
 </style>
 </head>
 <body class="locked">
@@ -740,7 +748,7 @@ footer{
       Open Invitation
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
     </button>
-    <div class="gate-bar" id="gBar"></div>
+
   </div>
 </div>
 
@@ -827,16 +835,26 @@ footer{
     <div class="inv-rule"></div>
     <div class="inv-label">Invite</div>
     <div class="inv-sub">You to join us in the wedding celebrations of</div>
-    <!-- GROOM -->
-    <span class="inv-name" id="iGN"></span>
-    <div class="inv-ptag">Son of</div>
-    <div class="inv-pname" id="iGPar"></div>
-    <span class="inv-and">&</span>
-    <!-- BRIDE -->
-    <span class="inv-name" id="iBN"></span>
-    <div class="inv-ptag">Daughter of</div>
-    <div class="inv-pname" id="iBPar"></div>
-    <div class="inv-rule" style="margin-top:20px;"></div>
+    <div class="inv-rule"></div>
+    <!-- GROOM block — perfectly centred -->
+    <div class="inv-person">
+      <span class="inv-name" id="iGN"></span>
+      <div class="inv-ptag">Son of</div>
+      <div class="inv-pname" id="iGPar"></div>
+    </div>
+    <!-- ampersand divider -->
+    <div class="inv-sep">
+      <div class="inv-sep-line"></div>
+      <span class="inv-and">&amp;</span>
+      <div class="inv-sep-line"></div>
+    </div>
+    <!-- BRIDE block — perfectly centred -->
+    <div class="inv-person">
+      <span class="inv-name" id="iBN"></span>
+      <div class="inv-ptag">Daughter of</div>
+      <div class="inv-pname" id="iBPar"></div>
+    </div>
+    <div class="inv-rule" style="margin-top:22px;"></div>
     <div class="inv-tag">On the following events ↓</div>
   </div>
 </section>
@@ -892,24 +910,7 @@ footer{
   </svg>
 </div>
 
-<!-- ═══ RSVP ════════════════════════════════════════ -->
-<section id="rsvp">
-  <div class="rsvp-bloom"></div>
-  <div class="rsvp-wm" id="rWm"></div>
-  <div class="rsvp-inner">
-    <span class="rsvp-please rv">Please</span>
-    <span class="rsvp-big rv d1">RSVP</span>
-    <a class="rsvp-wa rv d2" id="waLink" href="#" target="_blank" rel="noopener">
-      <div class="wa-icon">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4c-4.9 0-8.9 4-8.9 8.9 0 1.57.42 3.1 1.2 4.44L3 21l3.78-1.32a8.9 8.9 0 0 0 4.27 1.09h.01c4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.62-2.36-6.55zm-5.55 13.7h-.01a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.98.94-2.73-.18-.28a7.38 7.38 0 0 1-1.13-3.93c0-4.08 3.32-7.4 7.4-7.4a7.36 7.36 0 0 1 5.24 2.17 7.36 7.36 0 0 1 2.17 5.24c0 4.08-3.32 7.4-7.4 7.4zm4.06-5.54c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11s-.57.72-.7.87-.26.17-.48.06a6.05 6.05 0 0 1-3-2.62c-.23-.39.23-.36.65-1.2.07-.15.04-.28-.02-.39s-.5-1.2-.68-1.64c-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.57 2.4 3.8 3.36.53.23.94.36 1.26.47.53.17 1.01.14 1.39.09.42-.06 1.31-.54 1.5-1.06.18-.52.18-.96.13-1.06-.05-.1-.2-.16-.42-.27z"/></svg>
-      </div>
-      <div class="wa-t">
-        <div class="wa-lbl">Click to message on WhatsApp</div>
-        <div class="wa-cta">Confirm Your Attendance</div>
-      </div>
-    </a>
-  </div>
-</section>
+
 
 <!-- ═══ THINGS TO KNOW ═══════════════════════════════ -->
 <section id="things">
@@ -943,6 +944,22 @@ footer{
   <p class="cd-note rv d2">Our families are so excited to celebrate this beautiful moment with all of you. We look forward to seeing you there.</p>
 </section>
 
+
+<!-- ═══ ANJANADRI WEDDINGS BANNER ══════════════════ -->
+<div id="biz-banner">
+  <div class="biz-inner">
+    <p class="biz-couple" id="bizCouple"></p>
+    <p class="biz-label">Website Designed By</p>
+    <p class="biz-name">Anjanadri Weddings</p>
+    <p class="biz-sub">Crafting beautiful, personalised wedding websites just like this one. Get in touch to create yours.</p>
+    <a class="biz-cta"
+       href="https://wa.me/917795764319?text=Hi%2C%20I%20saw%20a%20wedding%20website%20you%20made%20and%20I%27d%20like%20to%20get%20one%20for%20my%20wedding%20too!"
+       target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4c-4.9 0-8.9 4-8.9 8.9 0 1.57.42 3.1 1.2 4.44L3 21l3.78-1.32a8.9 8.9 0 0 0 4.27 1.09h.01c4.9 0 8.9-4 8.9-8.9 0-2.38-.93-4.62-2.36-6.55zm-5.55 13.7h-.01a7.4 7.4 0 0 1-3.77-1.03l-.27-.16-2.8.98.94-2.73-.18-.28a7.38 7.38 0 0 1-1.13-3.93c0-4.08 3.32-7.4 7.4-7.4a7.36 7.36 0 0 1 5.24 2.17 7.36 7.36 0 0 1 2.17 5.24c0 4.08-3.32 7.4-7.4 7.4zm4.06-5.54c-.22-.11-1.31-.65-1.51-.72-.2-.07-.35-.11-.5.11s-.57.72-.7.87-.26.17-.48.06a6.05 6.05 0 0 1-3-2.62c-.23-.39.23-.36.65-1.2.07-.15.04-.28-.02-.39s-.5-1.2-.68-1.64c-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.57 2.4 3.8 3.36.53.23.94.36 1.26.47.53.17 1.01.14 1.39.09.42-.06 1.31-.54 1.5-1.06.18-.52.18-.96.13-1.06-.05-.1-.2-.16-.42-.27z"/></svg>
+      Contact Us on WhatsApp
+    </a>
+  </div>
+</div>
 <footer>
   <div class="ft-n" id="ftN"></div>
   <div class="ft-h" id="ftH"></div>
@@ -1056,17 +1073,16 @@ footer{
     cpT.appendChild(s);
   });
   let ci=0,cMax=Math.max(0,gPh.length-3);
-  function slide(i){ci=Math.max(0,Math.min(cMax,i));const w=cpT.parentElement.offsetWidth;cpT.style.transform=`translateX(-${ci*(w/3+1)}px)`;}
+  function slide(i){
+    ci=Math.max(0,Math.min(cMax,i));
+    const slideW=cpT.firstChild?cpT.firstChild.offsetWidth+3:0;
+    cpT.style.transform=`translateX(-${ci*slideW}px)`;
+  }
   $('cpP').onclick=()=>slide(ci-1);
   $('cpN').onclick=()=>slide(ci+1);
   setInterval(()=>slide(ci<cMax?ci+1:0),3000);
 
-  /* RSVP */
-  $('rWm').textContent=W.groom+'  &  '+W.bride;
-  if(W.whatsapp){
-    const msg=encodeURIComponent(W.whatsappMsg||`Hi! Confirming for ${W.groom} & ${W.bride}'s wedding 🎉`);
-    $('waLink').href=`https://wa.me/${W.whatsapp}?text=${msg}`;
-  }
+
 
   /* THINGS TO KNOW */
   const tg=$('thGrid');
@@ -1091,12 +1107,14 @@ footer{
   }
   tick(); setInterval(tick,1000);
 
-  /* FOOTER */
+  /* FOOTER + BANNER */
   T('ftN',`${W.groom} & ${W.bride}`);
+  const bc=$('bizCouple');
+  if(bc) bc.innerHTML=`<b>${W.groom} &amp; ${W.bride}</b> &mdash; ${dl||'Wedding Website'}`;
   T('ftH',W.hashtag||`#${W.groom}Weds${W.bride}`);
 
   /* ── GATE — opens instantly on click ── */
-  const gate=$('gate'),gBar=$('gBar'),gBtn=$('gBtn');
+  const gate=$('gate'),gBtn=$('gBtn');
   let opened=false;
   function open(){
     if(opened)return;opened=true;
@@ -1112,10 +1130,7 @@ footer{
   }
   gBtn.addEventListener('click',open,{once:true});
 
-  /* auto open after 1.5s with progress bar */
-  const A=1500,t0=Date.now();
-  (function bar(){if(opened)return;const p=Math.min(100,(Date.now()-t0)/A*100);gBar.style.width=p+'%';if(p<100)requestAnimationFrame(bar);})();
-  setTimeout(()=>open(),A);
+  /* No auto-open — user must click the button */
 
 })();
 </script>
